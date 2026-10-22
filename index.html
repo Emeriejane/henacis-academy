@@ -1,0 +1,1442 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="A nine-module social media marketing course: theory, practical video labs, assignments, quizzes and a certificate."><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><title>Social Media Marketing Masterclass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: a course app. Emerald "studio" hero, a path of nine modules, and a focused reader for each module (lessons, lab, assignment, quiz). */
+:root{
+--bg:#F3F5F1; --surface:#FFFFFF; --surface-2:#E9EDE6; --ink:#13201B; --muted:#5A6863; --line:#D7DDD4;
+--accent:#0E6B57; --accent-2:#0A5244; --accent-soft:#DCEFE8; --on-accent:#FFFFFF;
+--gold:#B9811A; --gold-soft:#F6E9CB; --ok:#1E7A4C; --ok-soft:#DDF1E5; --bad:#B23A2F; --bad-soft:#F8E1DE;
+--hero:#0B3A30; --hero-2:#0F4B3E; --hero-ink:#EEF5F1; --hero-muted:#A9C6BB;
+--display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+--body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+--mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+--r:14px; --shadow:0 1px 2px rgba(19,32,27,.06), 0 8px 24px rgba(19,32,27,.06);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+--bg:#0C1210; --surface:#141C19; --surface-2:#1B2521; --ink:#E7EEEA; --muted:#97A59F; --line:#2A3631;
+--accent:#3CBF9C; --accent-2:#5AD2B0; --accent-soft:#163A30; --on-accent:#06120E;
+--gold:#E8B34C; --gold-soft:#3A2E16; --ok:#4FC98C; --ok-soft:#14321F; --bad:#EA6E62; --bad-soft:#3A1A17;
+--hero:#0E2620; --hero-2:#123329; --hero-ink:#EEF5F1; --hero-muted:#93B3A7;
+--shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme:dark;}}
+:root[data-theme="dark"]{
+--bg:#0C1210; --surface:#141C19; --surface-2:#1B2521; --ink:#E7EEEA; --muted:#97A59F; --line:#2A3631;
+--accent:#3CBF9C; --accent-2:#5AD2B0; --accent-soft:#163A30; --on-accent:#06120E;
+--gold:#E8B34C; --gold-soft:#3A2E16; --ok:#4FC98C; --ok-soft:#14321F; --bad:#EA6E62; --bad-soft:#3A1A17;
+--hero:#0E2620; --hero-2:#123329; --hero-ink:#EEF5F1; --hero-muted:#93B3A7;
+--shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase}
+/* top bar */
+.bar{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;background:none;border:0;color:var(--ink);padding:0;text-align:left}
+.mark{width:34px;height:34px;border-radius:10px;background:var(--accent);display:grid;place-items:center;flex:none}
+.mark svg{width:20px;height:20px}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.02rem;display:block;line-height:1.1}
+.brand small{color:var(--muted);font-size:.74rem}
+.bar .spacer{flex:1}
+.prog{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.85rem}
+.prog .track{width:120px;height:6px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.prog .fill{height:100%;background:var(--accent);border-radius:99px;transition:width .5s ease}
+@media (max-width:520px){.prog .track{display:none}.brand small{display:none}}
+/* hero */
+.hero{background:var(--hero);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -55% 45%;height:120%;background:radial-gradient(closest-side,var(--hero-2),transparent);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;padding-block:56px 48px;display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:40px 36px}}
+.gift{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(238,245,241,.25);border-radius:99px;padding:6px 12px;color:var(--hero-muted)}
+.gift i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:block}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.9rem);font-weight:800;margin:18px 0 14px;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lede{color:var(--hero-muted);font-size:1.08rem;max-width:56ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:12px 20px;font-weight:700;border:1px solid transparent;text-decoration:none;transition:transform .15s ease,background .2s}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:#1B1406}
+.btn-ghost{background:transparent;color:var(--hero-ink);border-color:rgba(238,245,241,.3)}
+.btn-primary{background:var(--accent);color:var(--on-accent)}
+.btn-primary:hover{background:var(--accent-2)}
+.btn-line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(238,245,241,.14);border:1px solid rgba(238,245,241,.14);border-radius:18px;overflow:hidden}
+.stats div{background:var(--hero);padding:18px 20px}
+.stats b{font-family:var(--display);font-size:2rem;font-weight:800;display:block;line-height:1;font-variant-numeric:tabular-nums}
+.stats span{color:var(--hero-muted);font-size:.86rem}
+/* sections */
+.section{padding-block:48px}
+.eyebrow{color:var(--accent);font-weight:700}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px;margin-bottom:22px}
+.sec-head h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800}
+.sec-head p{color:var(--muted);max-width:52ch}
+.letter{display:grid;grid-template-columns:auto 1fr;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.letter .av{width:52px;height:52px;border-radius:50%;background:var(--gold-soft);color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.2rem}
+.letter p+p{margin-top:10px}
+.letter .sig{margin-top:14px;font-family:var(--display);font-weight:700}
+.letter .sig small{display:block;font-family:var(--body);font-weight:500;color:var(--muted)}
+@media (max-width:560px){.letter{grid-template-columns:1fr}}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:how}
+@media (max-width:860px){.how{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.how{grid-template-columns:1fr}}
+.how li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;counter-increment:how}
+.how li::before{content:counter(how);font-family:var(--mono);font-size:.8rem;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:8px;padding:3px 9px;display:inline-block;margin-bottom:10px}
+.how h3{font-size:1.05rem;margin-bottom:4px}
+.how p{color:var(--muted);font-size:.92rem}
+ol.how{padding:0;margin:0}
+/* module path */
+.path{display:grid;gap:12px}
+.mod{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;text-align:left;color:var(--ink);width:100%;transition:border-color .2s, transform .2s}
+.mod:not([disabled]):hover{border-color:var(--accent);transform:translateY(-1px)}
+.mod[disabled]{cursor:not-allowed;background:var(--surface-2)}
+.mod .num{width:64px;height:64px;border-radius:16px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.5rem}
+.mod.done .num{background:var(--ok);color:var(--on-accent)}
+.mod[disabled] .num{background:var(--surface);color:var(--muted)}
+.mod h3{font-size:1.18rem;font-weight:700}
+.mod p{color:var(--muted);font-size:.92rem;margin-top:2px}
+.mod .meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;color:var(--muted)}
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:5px 11px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.chip svg{width:14px;height:14px}
+.chip.lock{background:var(--surface);color:var(--muted);border:1px solid var(--line)}
+.chip.open{background:var(--gold-soft);color:var(--gold)}
+.chip.done{background:var(--ok-soft);color:var(--ok)}
+@media (max-width:620px){.mod{grid-template-columns:48px 1fr;gap:14px}.mod .num{width:48px;height:48px;font-size:1.15rem;border-radius:12px}.mod .st{grid-column:2}}
+.cert-teaser{margin-top:16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:1px dashed var(--gold);background:var(--gold-soft);border-radius:18px;padding:18px 22px}
+.cert-teaser h3{font-size:1.1rem}
+.cert-teaser p{color:var(--muted);font-size:.92rem}
+/* module view */
+.mhead{background:var(--hero);color:var(--hero-ink)}
+.mhead .wrap{padding-block:30px 0}
+.back{background:none;border:0;color:var(--hero-muted);padding:0;display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.back:hover{color:var(--hero-ink)}
+.mhead h1{font-size:clamp(1.8rem,4.2vw,2.8rem);font-weight:800;margin:14px 0 8px}
+.mhead .tag{color:var(--hero-muted);max-width:62ch}
+.outcomes{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.outcomes span{border:1px solid rgba(238,245,241,.22);border-radius:99px;padding:5px 12px;font-size:.84rem;color:var(--hero-ink)}
+.tabs{display:flex;gap:4px;margin-top:26px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{background:transparent;border:0;color:var(--hero-muted);padding:12px 16px;border-radius:12px 12px 0 0;font-weight:700;white-space:nowrap;display:inline-flex;gap:8px;align-items:center}
+.tab[aria-selected="true"]{background:var(--bg);color:var(--ink)}
+.tab .n{font-family:var(--mono);font-size:.72rem;opacity:.75}
+.tab svg{width:14px;height:14px}
+.tab .ts{display:none}
+.reader{display:grid;grid-template-columns:250px minmax(0,1fr);min-width:0;gap:36px;padding-block:32px 60px}
+@media (max-width:900px){.reader{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:20px 48px}}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 80px);align-self:start;display:grid;gap:4px}
+@media (max-width:900px){.toc{position:static;display:flex;flex-wrap:wrap;gap:8px;min-width:0}.toc button{display:flex;width:auto;padding:8px;border-color:var(--line);background:var(--surface)}.toc button>span:last-child{display:none}.toc button[aria-current="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}.toc::before{content:"Lessons";width:100%;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}}
+.toc button{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;text-align:left;background:transparent;border:1px solid transparent;border-radius:12px;padding:10px 12px;color:var(--muted);font-size:.9rem;line-height:1.35}
+.toc button[aria-current="true"]{background:var(--surface);border-color:var(--line);color:var(--ink);font-weight:600}
+.toc .dot{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.toc .dot.ok{background:var(--ok);border-color:var(--ok);color:var(--on-accent)}
+.lesson{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,40px);box-shadow:var(--shadow);min-width:0}
+.lesson .kicker{color:var(--accent);font-weight:600}
+.lesson h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin:8px 0 20px}
+.prose{max-width:68ch}
+.prose p{margin:0 0 14px}
+.prose h3{font-size:1.15rem;font-weight:700;margin:26px 0 10px}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:1.2em}
+.prose li{margin:4px 0}
+.prose strong{font-weight:700}
+.callout{border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0}
+.callout b{display:block;font-family:var(--display);margin-bottom:4px}
+.example{background:var(--surface-2);border-radius:12px;padding:14px 18px;margin:18px 0;font-size:.95rem}
+.example .mono{color:var(--muted);display:block;margin-bottom:6px}
+.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px}
+.tbl table{border-collapse:collapse;width:100%;min-width:480px;font-size:.92rem}
+.tbl th,.tbl td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{background:var(--surface-2);font-weight:700;font-size:.82rem}
+.tbl tr:last-child td{border-bottom:0}
+.takeaways{margin-top:24px;border-top:1px solid var(--line);padding-top:18px}
+.takeaways h4{font-size:.95rem;margin-bottom:10px}
+.takeaways ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.takeaways li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:.95rem}
+.takeaways li::before{content:"";width:8px;height:8px;margin-top:8px;border-radius:2px;background:var(--accent)}
+.lnav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin-top:26px}
+.calc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:end;background:var(--accent-soft);border-radius:14px;padding:16px;margin:18px 0}
+@media (max-width:560px){.calc{grid-template-columns:1fr}}
+.calc label{display:grid;gap:4px;font-size:.82rem;font-weight:600;color:var(--muted)}
+.calc input{font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%}
+.calc output{font-family:var(--display);font-size:1.8rem;font-weight:800;color:var(--accent);line-height:1}
+.calc small{display:block;color:var(--muted);font-size:.8rem;margin-top:4px}
+/* lab */
+.panel{padding-block:32px 60px}
+.intro{color:var(--muted);max-width:62ch;margin-bottom:22px}
+.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+@media (max-width:400px){.videos{grid-template-columns:1fr}}
+.video{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:16/9;max-width:100%;background:var(--hero);position:relative;display:grid;place-items:center;color:var(--hero-ink);text-decoration:none;overflow:hidden}
+.thumb::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}
+.thumb .play{width:62px;height:62px;border-radius:50%;background:var(--gold);display:grid;place-items:center;position:relative;transition:transform .2s}
+.thumb:hover .play{transform:scale(1.08)}
+.thumb .play svg{width:22px;height:22px;margin-left:3px}
+.thumb .lbl{position:absolute;left:14px;top:12px;color:var(--hero-muted)}
+.thumb .yt{position:absolute;right:14px;bottom:12px;color:var(--hero-muted)}
+.video .vb{padding:16px 18px;display:grid;gap:8px;flex:1}
+.video h4{font-size:1.02rem;font-weight:700;line-height:1.3}
+.video p{color:var(--muted);font-size:.9rem}
+.video .vf{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 18px;border-top:1px solid var(--line)}
+.check{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;color:var(--muted);cursor:pointer}
+.check input{width:18px;height:18px;accent-color:var(--accent)}
+.vlink{font-weight:700;font-size:.88rem;text-decoration:none}
+.assign{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,36px);max-width:820px}
+.assign h3{font-size:1.4rem;font-weight:800;margin:6px 0 10px}
+.assign ol{padding-left:1.2em;display:grid;gap:8px;margin:16px 0}
+.deliver{background:var(--accent-soft);border-radius:12px;padding:14px 18px;margin-top:10px}
+.deliver b{font-family:var(--display)}
+/* quiz */
+.quiz{max-width:820px;display:grid;gap:16px}
+.gate{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;max-width:820px;display:grid;gap:12px;justify-items:start}
+.gate h3{font-size:1.3rem}
+.gate p{color:var(--muted)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.q legend{font-weight:700;font-size:1.02rem;padding:0;margin-bottom:12px;display:grid;grid-template-columns:auto 1fr;gap:10px}
+.q legend .mono{color:var(--accent);padding-top:3px}
+.q fieldset{border:0;padding:0;margin:0;min-width:0}
+.opt{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:start;padding:11px 14px;border:1px solid var(--line);border-radius:12px;margin-top:8px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--accent)}
+.opt input{margin-top:4px;accent-color:var(--accent);width:16px;height:16px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.why{margin-top:12px;font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+.why b{color:var(--ink)}
+.qfoot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 20px;position:sticky;bottom:max(12px,env(safe-area-inset-bottom,0px))}
+.qfoot span{color:var(--muted);font-size:.9rem}
+.result{border-radius:20px;padding:24px 26px;display:grid;gap:10px;justify-items:start}
+.result.pass{background:var(--ok-soft);border:1px solid var(--ok)}
+.result.fail{background:var(--bad-soft);border:1px solid var(--bad)}
+.result .score{font-family:var(--display);font-size:2.6rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.result.pass .score{color:var(--ok)}
+.result.fail .score{color:var(--bad)}
+/* certificate */
+.certwrap{padding-block:40px 70px;display:grid;gap:22px;justify-items:center}
+.certwrap canvas{width:100%;max-width:960px;height:auto;border-radius:12px;box-shadow:var(--shadow);background:#fff}
+.certctl{display:flex;flex-wrap:wrap;gap:12px;align-items:end;justify-content:center}
+.certctl label{display:grid;gap:4px;font-size:.82rem;font-weight:600;color:var(--muted)}
+.certctl input{font:inherit;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:0;width:260px;max-width:100%}
+.note{color:var(--muted);font-size:.88rem;text-align:center}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+.toast{position:fixed;left:50%;bottom:max(20px,calc(env(safe-area-inset-bottom,0px) + 12px));transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:12px;font-weight:600;opacity:0;transition:.3s;z-index:40;pointer-events:none;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:620px){
+body{font-size:15.5px}
+.hero .wrap{padding-block:32px 28px;gap:26px}
+.hero .lede{font-size:1rem}
+.hero .ctas .btn{flex:1 1 100%}
+.stats div{padding:14px 16px}.stats b{font-size:1.6rem}
+.section{padding-block:32px}
+.mhead .wrap{padding-top:20px}
+.mhead h1{font-size:1.65rem;margin:10px 0 6px}
+.mhead .tag{font-size:.95rem}
+.outcomes{display:none}
+.tabs{margin-top:18px;gap:2px}
+.tab{flex:1 1 0;justify-content:center;padding:11px 4px;font-size:.9rem;gap:4px}
+.tab .tl{display:none}.tab .ts{display:inline}
+.tab .n{display:none}
+.lesson{border-radius:16px;padding:20px 16px}
+.lesson h2{font-size:1.4rem;margin:6px 0 14px}
+.lnav .btn{flex:1 1 100%}
+.lnav #prevL{order:2}
+.panel{padding-block:22px 48px}
+.q{padding:16px}
+.opt{padding:10px 12px}
+.qfoot{flex-direction:column;align-items:stretch;text-align:center}
+.certctl{width:100%}.certctl label,.certctl input{width:100%}
+.gate,.assign{border-radius:16px}
+.mod{padding:14px}
+.mod p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head><body><header class="bar">
+<div class="wrap">
+<button class="brand" id="homeBtn" type="button" aria-label="Course home">
+<span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--on-accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V9"/><path d="M10 18V5"/><path d="M16 18v-7"/><path d="M21 18H3"/></svg></span>
+<span><b>SMM Masterclass</b><small>Theory + practical, 9 modules</small></span>
+</button>
+<span class="spacer"></span>
+<div class="prog" aria-live="polite"><span id="progTxt">0 of 9 modules</span><span class="track"><span class="fill" id="progFill" style="width:0%"></span></span></div>
+</div>
+</header>
+<main id="app"></main>
+<footer>
+<div class="wrap">
+<span>Social Media Marketing Masterclass · Created by Emerie Jane</span>
+<span>Your progress is saved in this browser on this device.</span>
+</div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+/* ======================= COURSE CONTENT ======================= */
+const YT = id => "https://www.youtube.com/watch?v=" + id;
+const PASS = 0.7;
+const MODULES = [
+{
+title:"Foundations of Social Media Marketing",
+tag:"What social media marketing really is, how the major platforms differ, how algorithms decide who sees your posts, and what a social media manager does all week.",
+hours:"3 hrs",
+outcomes:["Explain organic, paid and earned media","Pick the right platforms for a business","Understand ranking signals","Describe the SMM role"],
+lessons:[
+{title:"What social media marketing really is", body:`
+<p>Social media marketing (SMM) is the use of social platforms to reach the right people, build trust with them, and move them toward an action that matters to a business: an enquiry, a booking, a purchase, a referral. Posting pictures is the visible part. The real work is deciding <strong>who</strong> you want to reach, <strong>what</strong> you want them to believe, and <strong>what</strong> you want them to do next.</p>
+<h3>The three kinds of media</h3>
+<div class="tbl"><table><tr><th>Type</th><th>What it is</th><th>Example</th></tr>
+<tr><td><strong>Owned</strong></td><td>Channels you control</td><td>Your Instagram page, website, WhatsApp Status, email list</td></tr>
+<tr><td><strong>Paid</strong></td><td>Reach you buy</td><td>Instagram and Facebook ads, boosted posts, TikTok ads</td></tr>
+<tr><td><strong>Earned</strong></td><td>Attention others give you</td><td>Shares, reviews, reposts, mentions, word of mouth</td></tr></table></div>
+<p>Strong brands use all three together: owned content builds trust, paid media speeds up reach, and earned media proves you are worth trusting.</p>
+<h3>The customer journey on social</h3>
+<p>People rarely buy the first time they see you. They move through stages, and your content should serve each one:</p>
+<ol><li><strong>Awareness:</strong> they discover you (Reels, TikToks, shares).</li>
+<li><strong>Consideration:</strong> they check you out (your profile, highlights, carousels, reviews).</li>
+<li><strong>Conversion:</strong> they act (DM, WhatsApp chat, booking link, purchase).</li>
+<li><strong>Loyalty:</strong> they come back and refer others (community, offers, great service).</li></ol>
+<div class="callout"><b>Rented land vs owned land</b>Your followers live on a platform you don't own. Accounts get hacked, reach drops, rules change. Always move people from social into something you control, such as a WhatsApp contact list, an email list or a website.</div>`,
+takeaways:["SMM is about moving the right people to a valuable action, not just posting.","Combine owned, paid and earned media.","Plan content for every stage: awareness, consideration, conversion, loyalty.","Move followers onto channels you own."]},
+{title:"The platform landscape", body:`
+<p>Every platform has its own culture, audience and preferred format. A post that wins on LinkedIn can flop on TikTok. Your job is to match the business to the platforms where its customers already spend time.</p>
+<div class="tbl"><table><tr><th>Platform</th><th>Best for</th><th>Winning formats</th></tr>
+<tr><td>Instagram</td><td>Lifestyle, beauty, health, food, fashion, local services</td><td>Reels, carousels, Stories</td></tr>
+<tr><td>TikTok</td><td>Discovery by new people, younger audiences, entertainment-led education</td><td>Short, native-looking video</td></tr>
+<tr><td>Facebook</td><td>Older audiences, community groups, Marketplace, the ads engine behind Instagram</td><td>Video, groups, link posts</td></tr>
+<tr><td>LinkedIn</td><td>Professionals, B2B, recruitment, thought leadership</td><td>Text posts, document carousels</td></tr>
+<tr><td>X (Twitter)</td><td>News, opinion, real-time conversation</td><td>Short posts, threads</td></tr>
+<tr><td>YouTube</td><td>Search, long-form education, evergreen content</td><td>Tutorials, Shorts</td></tr>
+<tr><td>WhatsApp</td><td>Closing sales, customer service, repeat buyers</td><td>Status, catalog, direct chat</td></tr></table></div>
+<h3>How to choose</h3>
+<ul><li>Where does the target customer already spend time?</li>
+<li>What content can the business realistically produce every week?</li>
+<li>Where are competitors getting results, and where are they absent?</li></ul>
+<div class="callout"><b>The rule of two</b>Be excellent on two platforms before you are average on six. Most small businesses do well with one discovery platform (Instagram or TikTok) plus one closing channel (WhatsApp).</div>`,
+takeaways:["Each platform has its own culture and best formats.","Choose platforms by audience fit and production capacity.","Start with one discovery platform plus one closing channel."]},
+{title:"How algorithms decide what people see", body:`
+<p>An algorithm is a ranking system. Each platform has far more posts than any person could see, so it predicts which posts each person is most likely to enjoy and shows those first. You can't control the algorithm, but you can give it the signals it rewards.</p>
+<h3>The signals that matter most</h3>
+<ul><li><strong>Watch time and retention:</strong> do people watch to the end, or rewatch? This is the strongest signal for video.</li>
+<li><strong>Shares and sends:</strong> sharing a post to a friend in DMs tells the platform it's valuable.</li>
+<li><strong>Saves:</strong> people save content they want to come back to, such as tips, checklists and tutorials.</li>
+<li><strong>Comments and replies:</strong> real conversation beats emoji comments.</li>
+<li><strong>Relationship:</strong> people who often interact with you see more of you.</li>
+<li><strong>Interest match:</strong> the platform learns what topics your content covers and shows it to people interested in those topics.</li></ul>
+<h3>Myths to drop</h3>
+<ul><li><strong>"Hashtags will make me go viral."</strong> They help with categorising, not reach. Use 3 to 5 relevant ones.</li>
+<li><strong>"There is one perfect posting time."</strong> Good content performs at most times. Check your own insights for when your audience is online.</li>
+<li><strong>"I've been shadowbanned."</strong> Usually, reach dropped because the content didn't hold attention. Improve the hook first.</li></ul>
+<div class="callout"><b>The simple test</b>Before you post, ask: would someone stop scrolling for this, watch to the end, and send it to a friend? If yes, the algorithm will usually agree.</div>`,
+takeaways:["Algorithms rank by predicted interest.","Watch time, shares and saves are the most powerful signals.","Consistency and quality beat hacks and hashtags."]},
+{title:"The social media manager's role", body:`
+<p>A social media manager (SMM) is part strategist, part creator, part customer-service rep and part analyst. Businesses hire one so they can stay visible and win customers without doing it all themselves.</p>
+<h3>Core responsibilities</h3>
+<ol><li><strong>Strategy:</strong> goals, audience, platforms, content pillars.</li>
+<li><strong>Content:</strong> planning, designing, filming, writing captions.</li>
+<li><strong>Publishing:</strong> scheduling and posting consistently.</li>
+<li><strong>Community:</strong> replying to comments and DMs, and handling complaints.</li>
+<li><strong>Advertising:</strong> running and optimising paid campaigns.</li>
+<li><strong>Analytics:</strong> tracking results and reporting what's working.</li></ol>
+<h3>A typical week</h3>
+<div class="tbl"><table><tr><th>Day</th><th>Focus</th></tr>
+<tr><td>Monday</td><td>Review last week's numbers, plan this week's posts</td></tr>
+<tr><td>Tuesday–Wednesday</td><td>Create: shoot videos, design graphics, write captions</td></tr>
+<tr><td>Thursday</td><td>Schedule content, get client approval, check ads</td></tr>
+<tr><td>Friday</td><td>Engagement, research trends, send a weekly update</td></tr>
+<tr><td>Every day</td><td>15–30 minutes replying to comments and DMs</td></tr></table></div>
+<div class="callout"><b>Skills that make you valuable</b>Clear writing, basic design (Canva), phone video editing (CapCut), a feel for trends, people skills, and comfort with numbers. All of these can be learned, and this course covers every one.</div>`,
+takeaways:["An SMM covers strategy, content, community, ads and analytics.","A weekly rhythm keeps the work under control.","The core skills can all be learned."]}
+],
+videos:[
+{id:"bgrA3kuZpWk",title:"Free Social Media Management Full Course: Social Media Management for Beginners 2026",focus:"Watch for the overview of the SMM role and daily tasks. Compare it with Lesson 4."},
+{id:"oyOAfnnoIyI",title:"Social Media Marketing (Full FREE Course)",focus:"A complete walkthrough of the fundamentals. Note how the instructor connects content to business goals."},
+{id:"9yVkBqK-jog",title:"Social Media Marketing 101: The Complete Beginner's Guide",focus:"Good refresher on platforms and the basics of growing an audience."}
+],
+assignment:{title:"Platform reality check",steps:[
+"Pick one real business you know: your own, a friend's, or a brand you admire.",
+"Write who its ideal customer is in two sentences.",
+"Visit its pages on at least three platforms and note which are active, which are abandoned, and which get the most engagement.",
+"Recommend the two platforms the business should focus on, and explain why in three bullet points.",
+"Name one thing the business could do to move followers onto a channel it owns."],
+deliver:"A one-page note: ideal customer, platform audit, top two platforms and your reasoning."},
+quiz:[
+{q:"Which of these is an example of earned media?",o:["A sponsored Instagram ad","A customer sharing your post to their Story","Your own website","A WhatsApp broadcast you send"],a:1,why:"Earned media is attention others give you freely, such as shares, reviews and mentions."},
+{q:"Why should a business move followers onto WhatsApp lists, email or a website?",o:["Because social media is illegal for business","Because those channels are owned and can't be taken away by a platform","Because ads only work on email","Because it increases hashtags"],a:1,why:"Social accounts are 'rented land'. Owned channels protect the business from hacks, reach drops and rule changes."},
+{q:"A customer sees your Reel for the first time. Which stage of the journey is that?",o:["Loyalty","Conversion","Awareness","Retention"],a:2,why:"First discovery is the awareness stage."},
+{q:"Which signal is usually strongest for video content?",o:["Number of hashtags","Watch time and retention","Posting at exactly 7pm","Using a filter"],a:1,why:"Platforms reward videos people watch to the end and rewatch."},
+{q:"A small boutique has limited time. What platform plan is most sensible?",o:["Post on all seven platforms daily","One discovery platform plus WhatsApp for closing","Only LinkedIn","Only X (Twitter)"],a:1,why:"The rule of two: be excellent on one discovery platform plus one closing channel."},
+{q:"Which platform is best known for B2B and professional audiences?",o:["TikTok","LinkedIn","Pinterest","Snapchat"],a:1,why:"LinkedIn is where professionals and decision-makers gather."},
+{q:"Your reach suddenly dropped. What should you check first?",o:["Whether you've been shadowbanned","Whether your hooks and content are holding attention","Your phone model","Whether you used 30 hashtags"],a:1,why:"Reach drops usually come from weaker retention. Improve the hook and value first."},
+{q:"Which is NOT a core responsibility of a social media manager?",o:["Community management","Analytics and reporting","Filing the company's tax returns","Content planning"],a:2,why:"Tax filing belongs to accounting, not social media management."}
+]
+},
+{
+title:"Strategy, Goals & Audience",
+tag:"Turn business goals into social media goals, understand exactly who you're speaking to, audit where you stand, and define a brand voice people recognise.",
+hours:"3.5 hrs",
+outcomes:["Write SMART social goals","Build an audience persona","Run a social audit and competitor analysis","Define brand voice and positioning"],
+lessons:[
+{title:"From business goals to social goals", body:`
+<p>A strategy begins with the business, not the platform. Ask the owner: <em>"In six months, what would make you say social media was worth it?"</em> The answer is usually more enquiries, more bookings, more sales or a stronger reputation. Your social goals must feed that.</p>
+<h3>Map business goals to social metrics</h3>
+<div class="tbl"><table><tr><th>Business goal</th><th>Social goal</th><th>Metric to track</th></tr>
+<tr><td>Be known in our city</td><td>Grow awareness</td><td>Reach, impressions, follower growth</td></tr>
+<tr><td>Build trust</td><td>Increase engagement</td><td>Saves, shares, comments, engagement rate</td></tr>
+<tr><td>Get more customers</td><td>Generate leads</td><td>DMs, WhatsApp chats, link clicks, form fills</td></tr>
+<tr><td>Increase revenue</td><td>Drive sales</td><td>Purchases, bookings, cost per acquisition</td></tr></table></div>
+<h3>Make the goal SMART</h3>
+<p><strong>S</strong>pecific, <strong>M</strong>easurable, <strong>A</strong>chievable, <strong>R</strong>elevant, <strong>T</strong>ime-bound.</p>
+<div class="example"><span class="mono">Weak goal</span>"Grow our Instagram."</div>
+<div class="example"><span class="mono">SMART goal</span>"Increase monthly WhatsApp enquiries from Instagram from 20 to 60 by the end of March by posting 4 Reels a week with a clear 'Chat us on WhatsApp' call to action."</div>`,
+takeaways:["Start from what the business needs, not what the platform offers.","Every social goal should link to a business outcome.","Write goals in SMART form so you can tell if you hit them."]},
+{title:"Knowing your audience", body:`
+<p>You can't speak to everyone. The more clearly you picture one ideal customer, the sharper your content becomes. Marketers capture this in an <strong>audience persona</strong>.</p>
+<h3>What a persona includes</h3>
+<ul><li><strong>Demographics:</strong> age range, location, income level, occupation.</li>
+<li><strong>Psychographics:</strong> values, interests, lifestyle, what they aspire to.</li>
+<li><strong>Pain points:</strong> what frustrates or worries them.</li>
+<li><strong>Objections:</strong> why they hesitate to buy (price, trust, time, fear).</li>
+<li><strong>Language:</strong> the exact words they use to describe their problem.</li>
+<li><strong>Habits:</strong> which apps they use, and when.</li></ul>
+<div class="example"><span class="mono">Sample persona: "Busy Bimpe"</span>32, banker in Lagos, married with one child. Wants to look polished but has little time. Scrolls Instagram on her commute and at night. Worries about overpaying for poor quality. Trusts recommendations from friends and real customer videos. Says "I need something that won't stress me."</div>
+<h3>How to research your audience</h3>
+<ol><li>Read comments and DMs on your page and on competitors' pages.</li>
+<li>Read reviews on Google, Jumia, Instagram and elsewhere.</li>
+<li>Ask existing customers why they bought.</li>
+<li>Run polls and question boxes in Stories.</li>
+<li>Look at your Insights for age, gender, location and active times.</li></ol>`,
+takeaways:["Write content for one clear person.","Pain points and objections give you your best content ideas.","Use your customers' own words in your captions."]},
+{title:"Social audit & competitor analysis", body:`
+<p>Before you plan where to go, you need to know where you are. A <strong>social audit</strong> is a health check of a brand's current accounts. A <strong>competitor analysis</strong> shows what's working in the market and where the gaps are.</p>
+<h3>Social audit checklist</h3>
+<ul><li>Is the handle consistent across platforms?</li>
+<li>Do the profile photo and bio say clearly what the business does, who it's for and how to buy?</li>
+<li>Is there a working link or WhatsApp contact?</li>
+<li>Are Story Highlights organised (Prices, Reviews, How to order, FAQs)?</li>
+<li>How often do they post? When was the last post?</li>
+<li>What are the top 5 posts of the last 90 days, and why did they work?</li>
+<li>Baseline numbers: followers, average reach, engagement rate, enquiries per month.</li></ul>
+<h3>Competitor analysis</h3>
+<p>Choose 3 to 5 competitors: some direct (same product, same city) and one aspirational brand you'd like to become. For each, record:</p>
+<div class="tbl"><table><tr><th>What to note</th><th>Why</th></tr>
+<tr><td>Posting frequency and formats</td><td>Shows the effort level needed to compete</td></tr>
+<tr><td>Their best-performing posts</td><td>Proves what the audience responds to</td></tr>
+<tr><td>Common complaints in their comments</td><td>Your opportunity to be better</td></tr>
+<tr><td>What they are NOT doing</td><td>The gap you can own</td></tr></table></div>
+<div class="callout"><b>Finish with a SWOT</b>Strengths, Weaknesses, Opportunities, Threats. One short list each turns your research into decisions.</div>`,
+takeaways:["Audit first so you have a baseline to measure growth against.","Study competitors to learn what works and spot gaps.","Turn research into a SWOT with clear actions."]},
+{title:"Brand voice & positioning", body:`
+<p>People follow brands that feel like someone. <strong>Brand voice</strong> is the personality in your words. <strong>Positioning</strong> is the specific place you want to hold in the customer's mind.</p>
+<h3>Define the voice in three words</h3>
+<p>Pick three traits, then say what each one means and what it doesn't mean.</p>
+<div class="tbl"><table><tr><th>Trait</th><th>We are</th><th>We are not</th></tr>
+<tr><td>Warm</td><td>Friendly, caring, we use names</td><td>Overly casual or slangy</td></tr>
+<tr><td>Expert</td><td>Clear, accurate, confident</td><td>Full of jargon or arrogant</td></tr>
+<tr><td>Encouraging</td><td>Positive, solution-focused</td><td>Pushy or fear-driven</td></tr></table></div>
+<h3>Write a positioning statement</h3>
+<div class="example"><span class="mono">Formula</span>For <strong>[audience]</strong> who <strong>[need or problem]</strong>, <strong>[brand]</strong> is the <strong>[category]</strong> that <strong>[key benefit]</strong>, unlike <strong>[alternative]</strong>.</div>
+<div class="example"><span class="mono">Example</span>For busy professionals in Owerri who want healthy meals without cooking, FreshBox is the meal-prep service that delivers balanced, home-style food to your office by noon, unlike fast food that leaves you tired.</div>
+<h3>Visual identity basics</h3>
+<ul><li>2 to 3 brand colours, used consistently.</li><li>1 to 2 fonts.</li><li>A consistent photo style (bright and clean, or warm and moody).</li><li>Logo placement rules.</li></ul>`,
+takeaways:["Voice is personality in words. Define it with three traits.","A positioning statement keeps every post on-message.","A consistent look makes content instantly recognisable."]}
+],
+videos:[
+{id:"d-nDgTm82As",title:"How to Create a Social Media Strategy from Scratch (Step-by-Step)",focus:"Follow along and build a strategy for the business you chose in Module 1."},
+{id:"BV4N-d8uKBU",title:"How To Create A Social Media Strategy Step By Step [+ Free Template]",focus:"Grab the template idea and compare its sections with Lessons 1–4."},
+{id:"inZgawRKxBs",title:"How To Make A Social Media Competitor Analysis [+ Free Template]",focus:"Practise the competitor analysis method on three real competitors."}
+],
+assignment:{title:"One-page social media strategy",steps:[
+"Write one SMART goal for your chosen business.",
+"Create one detailed audience persona with a name, pains, objections and favourite apps.",
+"Audit the business's main profile with the checklist in Lesson 3.",
+"Analyse three competitors and write a short SWOT.",
+"Define the brand voice in three words with 'we are / we are not' notes, and write the positioning statement."],
+deliver:"A one-page strategy document you could hand to a business owner."},
+quiz:[
+{q:"Which goal is written in SMART form?",o:["Grow our page","Get more likes soon","Increase Instagram enquiries from 20 to 60 per month by March","Be the best brand online"],a:2,why:"It's specific, measurable, relevant and has a deadline."},
+{q:"A business wants more customers. Which metric best shows progress?",o:["Impressions only","DMs, WhatsApp chats and link clicks","Number of filters used","Likes on old posts"],a:1,why:"Lead goals are measured by enquiries and clicks."},
+{q:"What is an 'objection' in an audience persona?",o:["A rude comment","A reason the customer hesitates to buy","A competitor's slogan","A banned hashtag"],a:1,why:"Objections like price, trust or time are the reasons people hesitate. Good content answers them."},
+{q:"Which is the BEST source of the exact words your customers use?",o:["A dictionary","Comments, DMs and reviews","Your own guesses","Random hashtags"],a:1,why:"Real customer language comes from what customers actually write."},
+{q:"Why include an aspirational brand in a competitor analysis?",o:["To copy its logo","To see a higher standard worth growing toward","To report it","It isn't useful"],a:1,why:"Aspirational brands show what excellent looks like in your category."},
+{q:"What does SWOT stand for?",o:["Sales, Web, Offers, Traffic","Strengths, Weaknesses, Opportunities, Threats","Style, Words, Organic, Trends","Strategy, Work, Output, Time"],a:1,why:"SWOT is a classic framework for turning research into decisions."},
+{q:"What does a positioning statement do?",o:["Lists all your prices","Defines the specific place you hold in the customer's mind","Replaces your logo","Sets your posting time"],a:1,why:"It clarifies the audience, the benefit and what makes you different."},
+{q:"Why define what your brand voice is NOT?",o:["To fill space","To stop the voice drifting too far, e.g. warm becoming sloppy","Because platforms require it","It has no purpose"],a:1,why:"Setting the limits keeps the voice consistent, whoever writes the caption."}
+]
+},
+{
+title:"Platform Mastery",
+tag:"Hands-on, platform by platform: set up and grow on Instagram, TikTok, Facebook, LinkedIn, WhatsApp Business and YouTube.",
+hours:"4.5 hrs",
+outcomes:["Optimise a business profile","Use the right format for each platform","Set up WhatsApp Business properly","Plan for YouTube and LinkedIn"],
+lessons:[
+{title:"Instagram for business", body:`
+<p>Instagram is often the main shop window for businesses. Each part of the account has a job.</p>
+<h3>Profile setup</h3>
+<ul><li>Switch to a <strong>Professional account</strong> (Business or Creator) to unlock Insights, contact buttons and ads.</li>
+<li><strong>Name field:</strong> include a keyword, e.g. "Ada Bakes | Cakes in Owerri". It's searchable.</li>
+<li><strong>Bio formula:</strong> What you do + who it's for + proof + call to action.</li>
+<li><strong>Link:</strong> WhatsApp link, booking page or a link-in-bio page.</li>
+<li><strong>Highlights:</strong> Prices, Reviews, How to Order, FAQs, Behind the Scenes.</li></ul>
+<div class="example"><span class="mono">Bio example</span>Custom cakes for birthdays & weddings in Owerri 🎂<br>500+ happy celebrations<br>Order 5 days ahead · tap below to chat 👇</div>
+<h3>Formats and their jobs</h3>
+<div class="tbl"><table><tr><th>Format</th><th>Main job</th><th>Tip</th></tr>
+<tr><td>Reels</td><td>Reach new people</td><td>Hook in 1–2 seconds; add on-screen text</td></tr>
+<tr><td>Carousels</td><td>Teach and earn saves</td><td>Slide 1 is a headline; the last slide is a CTA</td></tr>
+<tr><td>Stories</td><td>Build relationships and sell</td><td>Polls, questions, countdowns, behind the scenes</td></tr>
+<tr><td>Collab posts</td><td>Borrow another audience</td><td>Co-post with partners or creators</td></tr>
+<tr><td>Broadcast channel</td><td>Talk to your biggest fans</td><td>Exclusive updates and early offers</td></tr></table></div>`,
+takeaways:["A professional account unlocks insights and tools.","The bio must say what you do, who it's for, proof and the next step.","Reels reach, carousels teach, Stories sell."]},
+{title:"TikTok for business", body:`
+<p>TikTok's For You page shows content to people who don't follow you yet. That makes it one of the fastest ways for a small business to be discovered, if the content feels native to TikTok.</p>
+<h3>What works on TikTok</h3>
+<ul><li><strong>Hook in the first 2 seconds:</strong> a bold statement, a question, or a visual surprise.</li>
+<li><strong>Native style:</strong> filmed on a phone, natural, talking to camera. Over-produced ads get scrolled past.</li>
+<li><strong>Trends with a twist:</strong> use a trending sound or format, but make it about your niche.</li>
+<li><strong>Education as entertainment:</strong> "3 mistakes people make when…", "Watch me…", "Day in the life of…".</li>
+<li><strong>Replies with video:</strong> answer comments with a new video. Easy content that builds community.</li>
+<li><strong>Stitch and Duet:</strong> react to other videos in your niche.</li></ul>
+<h3>Posting rhythm</h3>
+<p>Consistency matters more than perfection. Many brands start with 3 to 5 short videos a week, study what gets the most watch time, and make more of that.</p>
+<div class="callout"><b>Faces build trust</b>Videos with a real person on camera, such as the owner, a staff member or a customer, usually outperform product-only clips.</div>`,
+takeaways:["TikTok rewards native, entertaining, phone-shot content.","Win the first two seconds.","Reply to comments with videos to turn questions into content."]},
+{title:"Facebook & LinkedIn", body:`
+<h3>Facebook</h3>
+<p>Facebook still has a large audience, especially among older adults and parents, and it powers the ads for both Facebook and Instagram.</p>
+<ul><li><strong>Page:</strong> keep it complete: hours, location, phone, WhatsApp button, reviews.</li>
+<li><strong>Groups:</strong> join or create community groups (e.g. city mums' groups, professional groups) and add value before you promote.</li>
+<li><strong>Marketplace:</strong> useful for local product sales.</li>
+<li><strong>Cross-posting:</strong> share Reels to Facebook as well.</li></ul>
+<h3>LinkedIn</h3>
+<p>LinkedIn is where professionals, organisations and decision-makers spend time. It suits services, consulting, health professionals, recruitment and B2B.</p>
+<ul><li><strong>Personal profiles beat company pages:</strong> people engage with people, so the founder's or expert's profile usually drives the most reach.</li>
+<li><strong>Formats:</strong> text posts with a strong first line, document (PDF) carousels, short videos, polls.</li>
+<li><strong>Content:</strong> lessons learned, case studies, opinions on industry trends, behind-the-scenes of professional life.</li>
+<li><strong>Comment strategy:</strong> thoughtful comments on others' posts build visibility fast.</li></ul>
+<div class="example"><span class="mono">LinkedIn opening line</span>"I almost turned down the client that doubled our revenue. Here's what changed my mind:"</div>`,
+takeaways:["Facebook remains strong for groups, older audiences and ads.","On LinkedIn, personal expertise beats corporate announcements.","Thoughtful comments are a growth strategy in their own right."]},
+{title:"WhatsApp Business & YouTube", body:`
+<h3>WhatsApp Business: where sales close</h3>
+<p>In many markets, including Nigeria, social media gets attention and WhatsApp closes the sale. Set it up like a professional storefront.</p>
+<ul><li><strong>Business profile:</strong> logo, description, address, hours, email, website.</li>
+<li><strong>Catalog:</strong> products or services with photos, prices and descriptions customers can browse.</li>
+<li><strong>Quick replies:</strong> saved answers for common questions (type "/" to use them).</li>
+<li><strong>Greeting and away messages:</strong> instant replies so nobody waits in silence.</li>
+<li><strong>Labels:</strong> sort chats into New lead, Paid, Pending delivery, VIP.</li>
+<li><strong>Status:</strong> treat it like a second feed. Post offers, testimonials and behind-the-scenes daily.</li>
+<li><strong>Click-to-WhatsApp:</strong> link from Instagram, Facebook and ads straight into a chat.</li></ul>
+<h3>YouTube: the search engine</h3>
+<p>YouTube content keeps getting found for years because people search it. Use it for answers to common questions and tutorials.</p>
+<ul><li>Titles that match search terms: "How to…", "Best… for…".</li>
+<li>Clear thumbnails: a face, 3–4 words, high contrast.</li>
+<li><strong>Shorts</strong> for discovery and long videos for depth and trust.</li></ul>`,
+takeaways:["WhatsApp Business is a sales tool: catalog, quick replies, labels, Status.","Link every platform to a WhatsApp chat.","YouTube rewards searchable, evergreen content."]}
+],
+videos:[
+{id:"JkMhBKi12q4",title:"The Complete Instagram For Business Tutorial 2026",focus:"Set up or improve an Instagram business profile as you watch."},
+{id:"zDotjCGg204",title:"How to Use TikTok Business (2026) Complete Guide",focus:"Pay attention to account setup and the business tools inside TikTok."},
+{id:"W9e_bLXRlz4",title:"LinkedIn Marketing for Beginners 2026 (The Complete Playbook)",focus:"Note the profile tips and the post formats that perform well."},
+{id:"Ox2vqbdAss8",title:"The Complete WhatsApp Business Tutorial (2025 Updated)",focus:"Set up the catalog, greeting message and quick replies on your own phone."}
+],
+assignment:{title:"Profile makeover",steps:[
+"Choose two platforms for your business (e.g. Instagram + WhatsApp Business).",
+"Take 'before' screenshots of both profiles.",
+"Rewrite the Instagram bio with the formula: what you do + who it's for + proof + CTA.",
+"Create or reorganise at least 4 Story Highlights.",
+"Set up WhatsApp Business with a profile, 3 catalog items, a greeting message and 3 quick replies.",
+"Take 'after' screenshots."],
+deliver:"Before-and-after screenshots with one sentence explaining each change."},
+quiz:[
+{q:"Which Instagram format is mainly used to reach NEW people?",o:["Highlights","Reels","Broadcast channel","Close Friends Story"],a:1,why:"Reels are pushed to non-followers and drive discovery."},
+{q:"Why put a keyword in the Instagram Name field?",o:["It changes your font","The Name field is searchable","It's required by law","It removes ads"],a:1,why:"The Name field is searchable, so a keyword helps people find you."},
+{q:"What usually performs best on TikTok?",o:["Highly polished TV commercials","Native, phone-shot content with a strong hook","Text-only posts","Long silent videos"],a:1,why:"TikTok rewards authentic, native-looking content that hooks quickly."},
+{q:"On LinkedIn, which usually gets the most reach?",o:["Company page announcements","Personal profiles sharing expertise and stories","Posting only links","Stock photos"],a:1,why:"People engage with people. Expert personal profiles outperform company pages."},
+{q:"Which WhatsApp Business feature lets customers browse your products?",o:["Labels","Catalog","Away message","Archived chats"],a:1,why:"The catalog shows products or services with photos and prices."},
+{q:"What are WhatsApp labels for?",o:["Decorating chats","Organising chats by stage, e.g. New lead, Paid, Pending","Hiding messages","Increasing followers"],a:1,why:"Labels help you manage the sales pipeline inside WhatsApp."},
+{q:"Why is YouTube content often called 'evergreen'?",o:["It's always green","People keep finding it through search for a long time","It disappears after 24 hours","It only works at Christmas"],a:1,why:"YouTube works like a search engine, so good videos keep getting found."},
+{q:"Which job do Instagram Stories do best?",o:["Reach millions of strangers","Build relationships and drive sales with followers","Replace your website","Improve SEO on Google"],a:1,why:"Stories are seen mainly by followers. They're ideal for connection, polls and offers."}
+]
+},
+{
+title:"Content Creation That Converts",
+tag:"Plan content pillars, write hooks and captions that stop the scroll, design clean graphics in Canva, and edit short-form video in CapCut.",
+hours:"5 hrs",
+outcomes:["Build 3–5 content pillars","Write hooks and captions with formulas","Design on-brand graphics","Shoot and edit short-form video"],
+lessons:[
+{title:"Content pillars & the content mix", body:`
+<p><strong>Content pillars</strong> are the 3 to 5 core themes a brand posts about again and again. They end the "what should I post today?" panic and keep the brand focused.</p>
+<h3>Example: a skincare clinic</h3>
+<div class="tbl"><table><tr><th>Pillar</th><th>Purpose</th><th>Post ideas</th></tr>
+<tr><td>Education</td><td>Build authority</td><td>"3 signs your skin barrier is damaged", ingredient explainers</td></tr>
+<tr><td>Results</td><td>Prove it works</td><td>Before/after (with consent), testimonials, case stories</td></tr>
+<tr><td>Behind the scenes</td><td>Build trust</td><td>Meet the team, a day at the clinic, how equipment is cleaned</td></tr>
+<tr><td>Community</td><td>Build connection</td><td>Answering DMs, polls, client shout-outs</td></tr>
+<tr><td>Offers</td><td>Drive sales</td><td>Packages, seasonal promos, booking reminders</td></tr></table></div>
+<h3>The content mix</h3>
+<p>A common rule is <strong>80/20</strong>: about 80% value (educate, entertain, inspire) and about 20% direct promotion. People follow for value and buy because of trust.</p>
+<div class="callout"><b>The 4 E's</b>Every post should <strong>E</strong>ducate, <strong>E</strong>ntertain, <strong>E</strong>mpower (inspire) or <strong>E</strong>arn (sell). If a post does none of these, don't post it.</div>`,
+takeaways:["Content pillars give you a repeatable plan.","Aim for roughly 80% value and 20% promotion.","Every post should educate, entertain, inspire or sell."]},
+{title:"Hooks, captions & copywriting", body:`
+<p>The <strong>hook</strong> is the first line or first two seconds. If it fails, nothing else gets seen. Spend as much time on the hook as on the rest of the post.</p>
+<h3>Proven hook formulas</h3>
+<ul><li><strong>Mistake:</strong> "Stop doing this if you want healthy skin."</li>
+<li><strong>Number list:</strong> "5 things I wish I knew before starting my business."</li>
+<li><strong>Curiosity:</strong> "Nobody talks about this part of owning a bakery…"</li>
+<li><strong>Call-out:</strong> "If you're a nurse thinking about starting a side business, watch this."</li>
+<li><strong>Result first:</strong> "How we got 47 bookings from one Reel."</li>
+<li><strong>Contrarian:</strong> "Posting every day is ruining your page. Here's why."</li></ul>
+<h3>Caption structure</h3>
+<ol><li><strong>Hook:</strong> the first line, which shows before "…more".</li>
+<li><strong>Value:</strong> the tip, story or explanation. Use short lines and white space.</li>
+<li><strong>CTA:</strong> one clear next step: "Save this", "Send to a friend who needs it", "Tap the link to book", "DM us 'PRICE'".</li></ol>
+<h3>Copywriting frameworks</h3>
+<div class="tbl"><table><tr><th>Framework</th><th>Steps</th></tr>
+<tr><td>PAS</td><td>Problem → Agitate (why it hurts) → Solution</td></tr>
+<tr><td>AIDA</td><td>Attention → Interest → Desire → Action</td></tr>
+<tr><td>Before–After–Bridge</td><td>Life before → life after → how you get there</td></tr></table></div>
+<p>Use 3 to 5 relevant hashtags, write alt text for accessibility, and read every caption aloud before posting.</p>`,
+takeaways:["The hook decides whether anything else gets seen.","Captions follow Hook → Value → CTA.","Use one clear CTA per post."]},
+{title:"Designing graphics with Canva", body:`
+<p>You don't need to be a graphic designer to create professional content. Canva gives you templates, brand kits and resizing, and good design follows a few simple rules.</p>
+<h3>Design principles</h3>
+<ul><li><strong>Hierarchy:</strong> one big headline, smaller supporting text. The eye should know where to look first.</li>
+<li><strong>Contrast:</strong> dark text on light backgrounds or the reverse. Never yellow on white.</li>
+<li><strong>One idea per slide:</strong> carousels work when each slide makes one point.</li>
+<li><strong>White space:</strong> empty space makes content feel premium.</li>
+<li><strong>Consistency:</strong> same fonts, colours and layout style every time.</li></ul>
+<h3>Sizes to remember</h3>
+<div class="tbl"><table><tr><th>Use</th><th>Size (pixels)</th></tr>
+<tr><td>Instagram/Facebook feed (portrait, recommended)</td><td>1080 × 1350</td></tr>
+<tr><td>Square post</td><td>1080 × 1080</td></tr>
+<tr><td>Stories, Reels, TikTok</td><td>1080 × 1920</td></tr>
+<tr><td>YouTube thumbnail</td><td>1280 × 720</td></tr></table></div>
+<div class="callout"><b>Set up a Brand Kit</b>In Canva, save the brand's logo, colours and fonts once. Every design then stays on-brand in one click.</div>`,
+takeaways:["Hierarchy, contrast and white space make designs look professional.","Use 1080×1350 for feed posts and 1080×1920 for vertical video.","A Canva Brand Kit keeps everything consistent."]},
+{title:"Short-form video with CapCut", body:`
+<p>Short-form video (Reels, TikTok, Shorts) is currently the strongest way to reach new people. A phone, natural light and CapCut are enough to make good videos.</p>
+<h3>The structure of a winning short video</h3>
+<ol><li><strong>Hook (0–3 sec):</strong> say or show the most interesting thing first.</li>
+<li><strong>Value (3–25 sec):</strong> deliver the tip, story or demonstration fast.</li>
+<li><strong>Payoff:</strong> the result, the reveal, the answer.</li>
+<li><strong>CTA:</strong> follow, save, comment or DM.</li></ol>
+<h3>Filming tips</h3>
+<ul><li>Face a window for soft, flattering light.</li>
+<li>Clean the lens. Film vertical, at eye level, with the phone propped steady.</li>
+<li>Sound matters more than picture: use a cheap lapel mic or film in a quiet room.</li>
+<li>Batch-film several videos in one session and change your top between them.</li></ul>
+<h3>Editing in CapCut</h3>
+<ul><li>Cut pauses and "umms". Keep the pace moving, roughly a cut every 2–3 seconds.</li>
+<li>Add <strong>auto-captions</strong>, because many people watch with sound off.</li>
+<li>Add on-screen text for the hook.</li>
+<li>Keep background music low under speech.</li>
+<li>Export in 1080p at 30fps.</li></ul>`,
+takeaways:["Hook → Value → Payoff → CTA.","Good light and clear sound beat expensive cameras.","Always add captions, since many people watch muted."]}
+],
+videos:[
+{id:"tWYi9ekKvbM",title:"Content Pillars 101: The Social Media Strategy to Help You Save Time and Grow Your Business",focus:"Build your own 3–5 pillars while watching."},
+{id:"3upTqx5aDog",title:"How to Write Better Hooks for Social Media (That Actually Work)",focus:"Write 10 hooks for your business using the patterns shown."},
+{id:"iizK1buYKag",title:"Canva 101: The Beginner's Guide to Social Media Design",focus:"Open Canva alongside and design one carousel."},
+{id:"EMDrgqepVhM",title:"CapCut Tutorial for Beginners 2026",focus:"Edit one 20–30 second video using cuts, captions and text."}
+],
+assignment:{title:"Create your first content set",steps:[
+"Define 4 content pillars for your business with 3 post ideas each.",
+"Write 10 hooks using at least 4 different formulas from Lesson 2.",
+"Design one 5-slide educational carousel in Canva (1080 × 1350).",
+"Film and edit one 20–30 second Reel or TikTok in CapCut with captions.",
+"Write captions for both using Hook → Value → CTA."],
+deliver:"Pillars table, 10 hooks, one carousel and one edited short video."},
+quiz:[
+{q:"What are content pillars?",o:["The poles holding up a studio light","3–5 core themes a brand posts about repeatedly","Paid ads","A type of hashtag"],a:1,why:"Pillars are the recurring themes that keep content focused."},
+{q:"In the 80/20 content mix, what is the 80%?",o:["Promotion and sales posts","Value: educate, entertain, inspire","Memes only","Reposts"],a:1,why:"Most content should give value. About 20% can sell directly."},
+{q:"Which is a 'mistake' style hook?",o:["Good morning everyone!","Stop doing this if you want clear skin.","New post","Check out our page"],a:1,why:"Mistake hooks trigger curiosity and the fear of getting it wrong."},
+{q:"What is the correct caption structure?",o:["CTA → Hashtags → Hook","Hook → Value → CTA","Hashtags → Emoji → Hook","Value → Price → Hashtags"],a:1,why:"Hook first, deliver value, then one clear call to action."},
+{q:"What does PAS stand for?",o:["Post, Analyse, Share","Problem, Agitate, Solution","Price, Audience, Sales","Plan, Act, Scale"],a:1,why:"PAS names the problem, shows why it hurts, then offers the solution."},
+{q:"The recommended size for an Instagram portrait feed post is…",o:["1920 × 1080","1080 × 1350","500 × 500","1280 × 720"],a:1,why:"1080 × 1350 (4:5) takes up more screen space in the feed."},
+{q:"Why add captions to short videos?",o:["They're required by law","Many people watch with the sound off","They make videos longer","They hide mistakes"],a:1,why:"Captions keep muted viewers watching and improve accessibility."},
+{q:"Which matters MORE for video quality?",o:["Expensive camera","Clear sound and good light","Many filters","Long intros"],a:1,why:"Viewers forgive average visuals far more than bad audio or dark footage."}
+]
+},
+{
+title:"Planning, Scheduling & Workflow",
+tag:"Build a content calendar, batch and repurpose content, schedule with the right tools, and use AI wisely so you deliver every week without burning out.",
+hours:"3 hrs",
+outcomes:["Create a monthly content calendar","Batch and repurpose content","Schedule with Meta Business Suite","Use AI responsibly"],
+lessons:[
+{title:"The content calendar", body:`
+<p>A <strong>content calendar</strong> is the plan of what goes out, where and when. It turns strategy into action and ends last-minute scrambling.</p>
+<h3>What to include for each post</h3>
+<ul><li>Date and time</li><li>Platform(s)</li><li>Content pillar</li><li>Format (Reel, carousel, Story, static)</li><li>Hook and caption</li><li>Visual or file link</li><li>CTA</li><li>Status: Idea → Drafted → Approved → Scheduled → Posted</li></ul>
+<h3>Plan around key dates</h3>
+<p>Mark the moments your audience cares about: Valentine's Day, Mother's Day, Easter, Eid, Independence Day (1 October in Nigeria), back-to-school, Black Friday, Christmas and New Year, plus industry days relevant to your niche (e.g. World Health Day for health brands).</p>
+<div class="example"><span class="mono">A simple weekly rhythm (4 posts)</span>Mon: Education carousel · Wed: Reel (tip or trend) · Fri: Results or testimonial · Sat: Offer or behind the scenes. Stories every day.</div>
+<p>Google Sheets, Notion, Trello or Canva's Content Planner all work. The best tool is the one you'll actually keep updated.</p>`,
+takeaways:["A calendar turns strategy into weekly action.","Track each post's status from idea to posted.","Plan campaigns around dates your audience cares about."]},
+{title:"Batching & repurposing", body:`
+<p><strong>Batching</strong> means doing similar tasks together: write all captions in one sitting, film all videos in one session. Switching between tasks wastes time and energy.</p>
+<h3>A batching week</h3>
+<div class="tbl"><table><tr><th>Block</th><th>Task</th></tr>
+<tr><td>Block 1 (2 hrs)</td><td>Plan next 2–4 weeks of ideas and hooks</td></tr>
+<tr><td>Block 2 (3 hrs)</td><td>Film all videos and take all photos</td></tr>
+<tr><td>Block 3 (3 hrs)</td><td>Edit videos and design graphics</td></tr>
+<tr><td>Block 4 (1 hr)</td><td>Write captions and schedule everything</td></tr></table></div>
+<h3>Repurposing: one idea, many posts</h3>
+<p>One strong piece of content can become many:</p>
+<ol><li>A 60-second Reel on "5 tips for…"</li><li>→ a 6-slide carousel with the same tips</li><li>→ 5 separate Stories, one tip each, with polls</li><li>→ a LinkedIn text post sharing the lesson</li><li>→ a WhatsApp Status series</li><li>→ a YouTube Short</li><li>→ a quote graphic of the strongest line</li></ol>
+<div class="callout"><b>Recycle your winners</b>Your audience doesn't see everything you post. Re-share your best content every 2–3 months with a fresh hook or cover.</div>`,
+takeaways:["Batch similar tasks to save hours each week.","Turn one idea into 5–10 pieces of content.","Repost your best performers with fresh hooks."]},
+{title:"Scheduling tools", body:`
+<p>Scheduling means preparing posts in advance and letting a tool publish them at set times. It protects consistency when life gets busy.</p>
+<div class="tbl"><table><tr><th>Tool</th><th>Good for</th><th>Cost</th></tr>
+<tr><td>Meta Business Suite</td><td>Facebook + Instagram posts, Reels, Stories; inbox; insights</td><td>Free</td></tr>
+<tr><td>Canva Content Planner</td><td>Design and schedule from the same place</td><td>Canva Pro</td></tr>
+<tr><td>Buffer</td><td>Simple multi-platform scheduling</td><td>Free plan + paid</td></tr>
+<tr><td>Metricool</td><td>Scheduling plus strong analytics and competitor tracking</td><td>Free plan + paid</td></tr>
+<tr><td>Later</td><td>Visual Instagram planning</td><td>Paid plans</td></tr>
+<tr><td>TikTok (desktop)</td><td>Native TikTok scheduling</td><td>Free</td></tr></table></div>
+<p>Tool plans and prices change often, so check each tool's site before you commit.</p>
+<h3>Client approval workflow</h3>
+<ol><li>Share a weekly or monthly content preview (calendar or doc).</li>
+<li>Set a deadline for feedback, e.g. "Approve by Thursday 5pm."</li>
+<li>Limit revision rounds in your agreement (e.g. 2 rounds).</li>
+<li>Schedule only approved content.</li></ol>
+<div class="callout"><b>Scheduling isn't the whole job</b>Schedule the posts, but show up live for comments and DMs, especially in the first hour after posting.</div>`,
+takeaways:["Meta Business Suite is free and covers Facebook and Instagram.","Use an approval workflow with clear deadlines.","Engage live even when posts are scheduled."]},
+{title:"Working smarter with AI", body:`
+<p>AI assistants (such as Claude or ChatGPT) can speed up a social media manager's work a lot, as long as you remain the editor.</p>
+<h3>Great uses</h3>
+<ul><li>Brainstorming 30 post ideas for a content pillar.</li>
+<li>Writing 10 hook variations to choose from.</li>
+<li>Drafting a caption you then rewrite in the brand voice.</li>
+<li>Repurposing a long video transcript into a carousel outline.</li>
+<li>Summarising competitor research or customer reviews.</li>
+<li>Drafting polite replies to tricky comments.</li></ul>
+<h3>Rules for responsible use</h3>
+<ul><li><strong>Edit everything:</strong> AI text can sound generic. Add real stories, local references and the brand's personality.</li>
+<li><strong>Fact-check:</strong> especially health, legal, financial and statistics claims.</li>
+<li><strong>Protect privacy:</strong> never paste customers' personal data or confidential client information.</li>
+<li><strong>Be honest:</strong> don't create fake reviews, fake testimonials or misleading images.</li></ul>
+<div class="example"><span class="mono">Prompt template</span>"You are a social media strategist. My business is [what you sell] for [audience] in [city]. My brand voice is [3 traits]. Give me 10 Reel ideas for the content pillar [pillar], each with a 1-line hook and a CTA."</div>`,
+takeaways:["Use AI for ideas and first drafts. You are the editor.","Always fact-check and protect private data.","Never use AI to fake reviews or results."]}
+],
+videos:[
+{id:"m-mC40EdhQo",title:"How To Use Meta Business Suite To Schedule Posts EASILY",focus:"Schedule one real Instagram/Facebook post as you follow along."},
+{id:"P2lTXs4yRTM",title:"Canva Tutorial: How to schedule social media posts with Canva for beginners",focus:"See how design and scheduling connect in one workflow."},
+{id:"bgrA3kuZpWk",title:"Free Social Media Management Full Course (planning section)",focus:"Rewatch the planning and organisation segments with your calendar open."}
+],
+assignment:{title:"Two-week content calendar",steps:[
+"Build a 2-week calendar in Google Sheets or Notion with the columns from Lesson 1.",
+"Fill it with at least 8 posts across your content pillars, including one key date.",
+"Take one idea and repurpose it into at least 4 formats.",
+"Use AI to generate 10 hooks, then edit the best 3 in your brand voice.",
+"Schedule at least 3 posts in Meta Business Suite or another tool."],
+deliver:"Your calendar, the repurposing map and a screenshot of scheduled posts."},
+quiz:[
+{q:"What is the main purpose of a content calendar?",o:["To decorate your office","To plan what goes out, where and when","To count followers","To replace analytics"],a:1,why:"It turns strategy into an organised publishing plan."},
+{q:"What is 'batching'?",o:["Posting all content in one day","Grouping similar tasks together, e.g. filming all videos in one session","Deleting old posts","Buying followers"],a:1,why:"Batching saves time and mental energy."},
+{q:"Which tool is free and schedules to both Facebook and Instagram?",o:["Meta Business Suite","Adobe Premiere","Excel","Zoom"],a:0,why:"Meta Business Suite is Meta's free tool for both platforms."},
+{q:"What is repurposing?",o:["Deleting content","Turning one piece of content into several formats","Copying a competitor's post","Changing your logo"],a:1,why:"One idea can become a Reel, carousel, Stories, a LinkedIn post and more."},
+{q:"Why limit revision rounds with clients?",o:["To be rude","To protect your time and keep projects on schedule","Because platforms require it","To post less"],a:1,why:"Clear limits prevent endless revisions and scope creep."},
+{q:"Which is a RESPONSIBLE use of AI?",o:["Writing fake customer reviews","Brainstorming hook ideas you then edit","Pasting customers' phone numbers into AI","Posting unverified health claims"],a:1,why:"Use AI for drafts and ideas, with human editing and fact-checking."},
+{q:"Why re-share your best content every few months?",o:["Your audience didn't see most of it the first time","It confuses the algorithm","It's required","To lose followers"],a:0,why:"Most followers miss most posts, so proven winners are worth recycling."},
+{q:"After scheduling a post, what should you still do?",o:["Nothing","Show up to reply to comments and DMs, especially early on","Delete it after an hour","Turn off notifications"],a:1,why:"Early engagement boosts performance and builds relationships."}
+]
+},
+{
+title:"Community, Engagement & Influencers",
+tag:"Turn followers into a loyal community: manage comments and DMs, handle complaints with grace, use social proof, and partner with creators.",
+hours:"3 hrs",
+outcomes:["Run daily community management","Handle complaints and crises","Collect and use social proof","Plan an influencer partnership"],
+lessons:[
+{title:"Community management", body:`
+<p>Followers watch. A community talks back. <strong>Community management</strong> is the daily work of responding, starting conversations and making people feel seen. It builds trust, and the algorithm rewards it too.</p>
+<h3>Daily habits</h3>
+<ul><li><strong>Reply fast:</strong> aim to answer comments and DMs within a few hours during business hours.</li>
+<li><strong>Reply with questions:</strong> "Thank you! Which colour would you pick?" keeps the conversation going.</li>
+<li><strong>Use names:</strong> personal replies feel human.</li>
+<li><strong>Engage outward:</strong> spend 15 minutes commenting meaningfully on customers', partners' and niche accounts' posts.</li>
+<li><strong>Treat DMs as your sales pipeline:</strong> every "How much?" is a potential customer, not an annoyance.</li></ul>
+<h3>Saved replies for DMs</h3>
+<div class="example"><span class="mono">Price enquiry</span>"Hi [Name]! Thank you for reaching out 😊 Our [service] starts from ₦[price], and it includes [benefits]. Would you like me to check available dates for you this week?"</div>
+<div class="callout"><b>Never answer "Check DM" with nothing else</b>When someone asks the price publicly, reply publicly ("Sent you the details, Ada! 💛") and then send the details in the DM. Others are watching how you treat customers.</div>`,
+takeaways:["Community is built by responding consistently and personally.","DMs are your sales pipeline.","Public replies show everyone how you treat customers."]},
+{title:"Handling complaints & crises", body:`
+<p>Every business gets negative comments. How you respond matters more than the complaint itself. A well-handled complaint can create a loyal customer.</p>
+<h3>The 4-step response</h3>
+<ol><li><strong>Acknowledge:</strong> "Thank you for letting us know, Chidi."</li>
+<li><strong>Apologise sincerely:</strong> "We're sorry your order arrived late. That's not the experience we want for you."</li>
+<li><strong>Act:</strong> "We're looking into it right now."</li>
+<li><strong>Move it to private:</strong> "Please check your DM so we can sort this out quickly."</li></ol>
+<h3>Do and don't</h3>
+<div class="tbl"><table><tr><th>Do</th><th>Don't</th></tr>
+<tr><td>Respond calmly and quickly</td><td>Argue or get defensive in public</td></tr>
+<tr><td>Follow up after it's solved</td><td>Delete genuine complaints</td></tr>
+<tr><td>Hide or report spam, scams and abuse</td><td>Ignore it and hope it disappears</td></tr>
+<tr><td>Escalate serious issues to the owner</td><td>Make promises you can't keep</td></tr></table></div>
+<h3>Prepare a crisis plan</h3>
+<p>Decide in advance: who must approve responses, how fast you'll respond, when to pause scheduled posts (always during a serious crisis), and a holding statement you can adapt. Also watch for fake accounts copying the brand to scam customers. Report them and warn followers.</p>`,
+takeaways:["Acknowledge, apologise, act, move it private.","Never argue publicly or delete genuine complaints.","Have a crisis plan before you need one."]},
+{title:"User-generated content & social proof", body:`
+<p><strong>Social proof</strong> means people trust what others like them say more than what a brand says about itself. <strong>User-generated content (UGC)</strong> is content made by customers: photos, videos, reviews and mentions.</p>
+<h3>Types of social proof</h3>
+<ul><li>Screenshot testimonials from WhatsApp and DMs (hide personal details).</li>
+<li>Video testimonials: even 15 seconds on a phone is powerful.</li>
+<li>Customer photos and tagged Stories, reposted.</li>
+<li>Reviews on Google and Facebook.</li>
+<li>Numbers: "500+ happy clients", "Rated 4.9 by 200 customers".</li>
+<li>Recognisable partners and media mentions.</li></ul>
+<h3>How to get more UGC</h3>
+<ol><li>Ask at the moment of delight: right after delivery or a great result.</li>
+<li>Make it easy: send a direct review link or a 3-question template.</li>
+<li>Create a branded hashtag or photo spot.</li>
+<li>Reward it: feature customers, run monthly giveaways for tagged posts.</li></ol>
+<div class="callout"><b>Ethics and consent</b>Always ask permission before reposting someone's content, credit them, and never fake testimonials. For health, beauty and medical brands, get clear written consent for before-and-after images and protect patient privacy.</div>`,
+takeaways:["People trust customers more than brands.","Ask for testimonials at the moment of delight.","Always get permission, especially for before-and-after images."]},
+{title:"Influencer & creator partnerships", body:`
+<p>Influencer marketing means partnering with creators whose audience trusts them. For small businesses, the best results often come from <strong>nano</strong> and <strong>micro</strong> creators, not celebrities.</p>
+<div class="tbl"><table><tr><th>Tier</th><th>Followers</th><th>Strength</th></tr>
+<tr><td>Nano</td><td>1k–10k</td><td>Very high trust, affordable, local</td></tr>
+<tr><td>Micro</td><td>10k–100k</td><td>Strong niche authority, good engagement</td></tr>
+<tr><td>Macro</td><td>100k–1M</td><td>Large reach, higher cost</td></tr>
+<tr><td>Mega</td><td>1M+</td><td>Mass awareness, expensive, lower trust per follower</td></tr></table></div>
+<h3>How to vet a creator</h3>
+<ul><li>Does their audience match your customer (location, age, interests)?</li>
+<li>Is engagement real? Look for genuine comments, not just emojis and "nice pic".</li>
+<li>Check for fake-follower signs: sudden jumps in followers, low views compared with follower count.</li>
+<li>Does their content style and values fit your brand?</li>
+<li>Ask for their recent results or insights screenshots.</li></ul>
+<h3>Make the partnership work</h3>
+<ol><li><strong>Brief:</strong> goal, key message, must-include points, do's and don'ts, deadline.</li>
+<li><strong>Agreement:</strong> deliverables (e.g. 1 Reel + 3 Stories), dates, payment, usage rights.</li>
+<li><strong>Creative freedom:</strong> let them speak in their own voice. It's why their audience trusts them.</li>
+<li><strong>Disclosure:</strong> paid posts should be labelled (#ad or the platform's paid partnership tag).</li>
+<li><strong>Track:</strong> use a unique discount code or link to measure sales.</li></ol>`,
+takeaways:["Nano and micro creators often deliver the best return for small brands.","Vet audience fit and real engagement, not follower count.","Use a clear brief, an agreement, disclosure and tracking."]}
+],
+videos:[
+{id:"9BEml-07-F0",title:"5 Expert Tips for Better Community Management",focus:"Note the tips you can apply to your daily comment and DM routine."},
+{id:"3gHy_YeJrao",title:"How to build a community on social media",focus:"Think about how to turn followers into a community for your chosen brand."},
+{id:"t71NbHzeZv8",title:"Influencer Marketing for Small Businesses",focus:"Use the ideas to shortlist three creators for your brand."}
+],
+assignment:{title:"Community playbook",steps:[
+"Write 6 saved replies for common DMs (price, location, delivery, availability, complaint, thank-you).",
+"Write a response to this comment: 'I ordered 2 weeks ago and nobody is answering me. Scam!'",
+"Write a one-paragraph crisis plan: who approves, response time, holding statement.",
+"Draft a message asking a happy customer for a testimonial.",
+"Shortlist 3 nano or micro creators and write a one-page brief for one of them."],
+deliver:"A playbook document with replies, crisis plan, testimonial request and influencer brief."},
+quiz:[
+{q:"Someone asks 'How much?' in the comments. What's best?",o:["Ignore it","Reply 'Check DM' and nothing else","Reply warmly in public, then send details by DM","Delete the comment"],a:2,why:"A warm public reply shows good service. Details follow privately."},
+{q:"What is the correct order for handling a complaint?",o:["Argue, delete, block","Acknowledge, apologise, act, move it private","Ignore, then post an offer","Reply with a meme"],a:1,why:"This calm 4-step process resolves issues and protects reputation."},
+{q:"When should you delete a comment?",o:["Whenever it's negative","When it's spam, a scam or abusive","Never, under any condition","When it has a typo"],a:1,why:"Remove spam and abuse, but keep genuine complaints and respond to them."},
+{q:"What is UGC?",o:["Unique Graphic Collection","User-generated content made by customers","Universal Growth Code","Unpaid Google Clicks"],a:1,why:"UGC is content customers create about a brand."},
+{q:"When is the best time to ask for a testimonial?",o:["A year later","At the moment of delight, right after a great result","Never","Only when sales are low"],a:1,why:"Customers are most willing to share right after a great experience."},
+{q:"Which creator tier usually has the highest trust and is most affordable?",o:["Mega","Macro","Nano","Celebrity"],a:2,why:"Nano creators have close, trusting communities and lower costs."},
+{q:"What's a sign of fake followers?",o:["Thoughtful comments","Very low views compared with a large follower count","Consistent posting","Clear niche content"],a:1,why:"A big audience with little engagement often means bought or inactive followers."},
+{q:"How can you track sales from an influencer partnership?",o:["Guess","Use a unique discount code or tracking link","Count their followers","Ask them to post more"],a:1,why:"Unique codes and links attribute sales to the creator."}
+]
+},
+{
+title:"Paid Social Advertising",
+tag:"Know when to pay, how Meta Ads Manager is structured, how to target the right people, set budgets, test creatives and read ad results.",
+hours:"4.5 hrs",
+outcomes:["Choose the right campaign objective","Structure campaigns, ad sets and ads","Build core, custom and lookalike audiences","Test, budget and read ad metrics"],
+lessons:[
+{title:"When to pay & how ads work", body:`
+<p>Organic content builds trust over time. Paid ads buy speed and precision: you choose exactly who sees your message and when. The best results come when you put money behind content that is already proven organically.</p>
+<h3>Boost button vs Ads Manager</h3>
+<div class="tbl"><table><tr><th></th><th>Boost post</th><th>Ads Manager</th></tr>
+<tr><td>Ease</td><td>Very easy, a few taps</td><td>More steps, more control</td></tr>
+<tr><td>Objectives</td><td>Limited</td><td>Full range (awareness, traffic, leads, sales…)</td></tr>
+<tr><td>Targeting & testing</td><td>Basic</td><td>Advanced audiences, placements, A/B testing</td></tr>
+<tr><td>Best for</td><td>Quick visibility on a strong post</td><td>Campaigns with real business goals</td></tr></table></div>
+<h3>How the ad auction works</h3>
+<p>Every time someone opens the app, advertisers compete for that ad space. The winner isn't only the highest bidder. Platforms also weigh <strong>ad quality</strong> and <strong>estimated action rate</strong> (how likely the person is to respond). Better creative can mean cheaper results.</p>
+<div class="callout"><b>Before you spend</b>Make sure the destination is ready: an optimised profile, a working WhatsApp number with quick replies, or a landing page that loads fast on mobile. Ads can't fix a weak offer or a broken follow-up.</div>`,
+takeaways:["Ads buy speed and precision. Put money behind proven content.","Ads Manager gives far more control than the Boost button.","Good creative lowers costs in the ad auction."]},
+{title:"Meta Ads Manager structure", body:`
+<p>Meta (Facebook and Instagram) ads are organised in three levels. Understanding this structure is the foundation of running ads well.</p>
+<div class="tbl"><table><tr><th>Level</th><th>What you set</th></tr>
+<tr><td><strong>1. Campaign</strong></td><td>The <strong>objective</strong>: what you want people to do</td></tr>
+<tr><td><strong>2. Ad set</strong></td><td><strong>Audience</strong>, <strong>budget</strong>, <strong>schedule</strong>, <strong>placements</strong>, conversion location (website, WhatsApp, Messenger, Instagram DM)</td></tr>
+<tr><td><strong>3. Ad</strong></td><td>The <strong>creative</strong> (image or video), primary text, headline, CTA button</td></tr></table></div>
+<h3>Campaign objectives</h3>
+<ul><li><strong>Awareness:</strong> show your ad to as many relevant people as possible.</li>
+<li><strong>Traffic:</strong> send people to a website, WhatsApp or profile.</li>
+<li><strong>Engagement:</strong> get messages, video views or post engagement.</li>
+<li><strong>Leads:</strong> collect contact details through forms, calls or chats.</li>
+<li><strong>App promotion:</strong> get app installs.</li>
+<li><strong>Sales:</strong> drive purchases on a website or catalog.</li></ul>
+<div class="example"><span class="mono">Example</span>A salon wants bookings via WhatsApp → Objective: <strong>Engagement</strong> (messages) or <strong>Leads</strong> → Conversion location: WhatsApp → Audience: women 22–45 within 10 km → Creative: a 15-second Reel of a transformation with "Chat us to book".</div>`,
+takeaways:["Campaign = objective, Ad set = audience + budget, Ad = creative.","Choose the objective that matches the action you want.","Click-to-WhatsApp ads suit businesses that close sales in chat."]},
+{title:"Targeting & audiences", body:`
+<p>Targeting decides who sees your ads. Meta offers three main audience types.</p>
+<h3>1. Core audiences</h3>
+<p>Built from location, age, gender, language, interests and behaviours. Example: "Women 25–45 in Owerri and Port Harcourt interested in skincare."</p>
+<h3>2. Custom audiences (warm audiences)</h3>
+<p>People who already know you:</p>
+<ul><li>Instagram or Facebook engagers (last 30–365 days)</li><li>Video viewers (e.g. watched 50%+)</li><li>Website visitors (requires the Meta Pixel)</li><li>Customer lists (phone numbers or emails, uploaded securely and with consent)</li></ul>
+<h3>3. Lookalike audiences</h3>
+<p>Meta finds new people who resemble your best customers or engagers. Great for scaling once you have a good source audience.</p>
+<h3>Broad targeting and Advantage+</h3>
+<p>Meta's AI targeting has become strong. With good creative, broad audiences (only location and age set) often perform as well as or better than narrow interest stacks. Your creative does the targeting by attracting the right people.</p>
+<div class="callout"><b>Retarget warm audiences</b>People who watched your videos or messaged you before are far more likely to buy. Always run a small retargeting ad set alongside your cold audience campaigns.</div>`,
+takeaways:["Core = demographics and interests, Custom = people who know you, Lookalike = people like your best customers.","Strong creative lets broad targeting work.","Retargeting warm audiences is usually your cheapest win."]},
+{title:"Budgets, testing & metrics", body:`
+<h3>Budgeting</h3>
+<ul><li>Start small with a test budget you can afford to lose while you learn.</li>
+<li>Give each test a few days (often 3–7) before judging. The system needs time and data.</li>
+<li>Scale winners gradually (e.g. increase the budget by 20–30% every few days) instead of doubling overnight.</li></ul>
+<h3>Testing (A/B testing)</h3>
+<p>Change <strong>one variable</strong> at a time so you know what caused the difference: hook, creative, headline, audience or offer. Creative is usually the biggest lever, so test 3–5 different videos or images.</p>
+<h3>Key ad metrics</h3>
+<div class="tbl"><table><tr><th>Metric</th><th>Meaning</th></tr>
+<tr><td>CPM</td><td>Cost per 1,000 impressions</td></tr>
+<tr><td>CTR</td><td>Click-through rate: % of people who clicked</td></tr>
+<tr><td>CPC</td><td>Cost per click</td></tr>
+<tr><td>CPL / CPA</td><td>Cost per lead / cost per acquisition (sale)</td></tr>
+<tr><td>ROAS</td><td>Return on ad spend: revenue ÷ ad spend</td></tr>
+<tr><td>Frequency</td><td>Average times each person saw the ad (very high = ad fatigue)</td></tr></table></div>
+<div class="example"><span class="mono">ROAS example</span>You spend ₦50,000 on ads and they generate ₦200,000 in sales. ROAS = 200,000 ÷ 50,000 = <strong>4</strong> (₦4 back for every ₦1 spent).</div>
+<h3>Tracking and policies</h3>
+<p>Install the <strong>Meta Pixel</strong> (and the Conversions API where possible) on your website to track actions and build audiences. Follow ad policies: health, finance and before-and-after claims are restricted, so read Meta's advertising standards before running ads in sensitive categories.</p>`,
+takeaways:["Test small, give tests time, scale gradually.","Change one variable at a time. Creative is the biggest lever.","Know CPM, CTR, CPC, CPA, ROAS and frequency."]}
+],
+videos:[
+{id:"Q3wJ7AaPAjs",title:"Mastering Facebook Ads: Meta Ads Manager Overview for Beginners",focus:"Get comfortable with the Ads Manager layout and the three levels."},
+{id:"IAVCZ9KiiLs",title:"Meta Ads for Beginners: Complete Step-by-Step Facebook & Instagram Ads Tutorial",focus:"Build a draft campaign alongside the video. You don't need to publish it."},
+{id:"9SAqt5NzSPY",title:"Meta Ads Full Tutorial for Beginners 2026: How to Run Meta Ads",focus:"Focus on audiences, budgets and reading results."}
+],
+assignment:{title:"Campaign plan (no spending required)",steps:[
+"Pick a goal for your chosen business and choose the matching campaign objective.",
+"Define one cold audience and one warm (retargeting) audience.",
+"Write 3 ad variations: different hooks, same offer.",
+"Set a test budget, schedule and the metric you'll judge success by.",
+"Optional: build the campaign as a draft in Ads Manager and screenshot each level."],
+deliver:"A one-page ad plan: objective, audiences, 3 ad variations, budget and success metric."},
+quiz:[
+{q:"Which level of a Meta campaign is the objective set at?",o:["Ad","Ad set","Campaign","Page"],a:2,why:"The campaign level holds the objective."},
+{q:"Where do you set the audience and budget?",o:["Campaign","Ad set","Ad","Profile settings"],a:1,why:"Audience, budget, schedule and placements are set at the ad set level."},
+{q:"Who is in a 'custom audience'?",o:["Random strangers","People who already know you, e.g. engagers, video viewers, customers","Only celebrities","Competitors' staff"],a:1,why:"Custom audiences are warm people who've interacted with you."},
+{q:"What is a lookalike audience?",o:["People who look like your logo","New people similar to your best customers","Your staff","People who unfollowed you"],a:1,why:"Meta finds new people resembling a source audience you provide."},
+{q:"Why change only one variable in an A/B test?",o:["It's cheaper","So you know what caused the difference","Meta requires it","It's faster to set up"],a:1,why:"Changing one thing isolates its effect."},
+{q:"You spend ₦40,000 and make ₦160,000 in sales. What is the ROAS?",o:["2","4","0.25","120,000"],a:1,why:"160,000 ÷ 40,000 = 4."},
+{q:"A very high frequency usually signals…",o:["Ad fatigue: people have seen it too many times","Perfect performance","The ad is new","Low budget"],a:0,why:"Seeing the same ad too often lowers response. Refresh the creative."},
+{q:"What is the best content to put ad money behind?",o:["Posts that flopped organically","Content already proven to perform organically","Random stock photos","Text-only screenshots"],a:1,why:"Proven organic winners usually make the most efficient ads."}
+]
+},
+{
+title:"Analytics & Reporting",
+tag:"Measure what matters, read native insights, run tests and present results so clients and bosses see the value of your work.",
+hours:"3 hrs",
+outcomes:["Calculate engagement rate","Separate vanity metrics from value metrics","Read Instagram and TikTok insights","Build a monthly report"],
+lessons:[
+{title:"Metrics that matter", body:`
+<p>Analytics tell you what's working so you can do more of it. The trick is knowing which numbers matter for your goal.</p>
+<div class="tbl"><table><tr><th>Metric</th><th>What it tells you</th></tr>
+<tr><td>Reach</td><td>How many unique people saw your content</td></tr>
+<tr><td>Impressions / views</td><td>Total times content was displayed (one person can count many times)</td></tr>
+<tr><td>Engagement rate</td><td>How much people interact relative to reach</td></tr>
+<tr><td>Saves & shares</td><td>How valuable people find the content</td></tr>
+<tr><td>Watch time & retention</td><td>Whether videos hold attention</td></tr>
+<tr><td>Profile visits & link clicks</td><td>Interest in learning more or buying</td></tr>
+<tr><td>Follower growth rate</td><td>How fast the audience is growing</td></tr>
+<tr><td>Conversions</td><td>Enquiries, bookings, sales: the business result</td></tr></table></div>
+<h3>Engagement rate</h3>
+<div class="example"><span class="mono">Formula</span>Engagement rate (by reach) = (likes + comments + shares + saves) ÷ reach × 100</div>
+<div class="calc" id="erCalc">
+<label for="erEng">Total engagements<input id="erEng" type="number" min="0" value="180" inputmode="numeric"></label>
+<label for="erReach">Reach<input id="erReach" type="number" min="1" value="4000" inputmode="numeric"></label>
+<div><output id="erOut" for="erEng erReach">4.5%</output><small id="erNote">Try your own numbers</small></div>
+</div>
+<p>There's no universal "good" number. Rates vary by platform, niche and account size. Compare against your own past performance and against close competitors.</p>
+<div class="callout"><b>Vanity vs value</b>Likes and follower counts feel good but don't pay bills. Prioritise metrics that connect to the goal: saves, shares, DMs, clicks, bookings, sales.</div>`,
+takeaways:["Reach is people; impressions are views.","Engagement rate = engagements ÷ reach × 100.","Value metrics beat vanity metrics."]},
+{title:"Reading native insights", body:`
+<p>Every platform has free built-in analytics. Check them weekly and do a deeper review monthly.</p>
+<h3>Instagram Insights (Professional account)</h3>
+<ul><li><strong>Overview:</strong> accounts reached, accounts engaged, follower changes.</li>
+<li><strong>Content:</strong> sort posts and Reels by reach, saves, shares or watch time to find your winners.</li>
+<li><strong>Audience:</strong> top cities, age ranges, gender and the most active times.</li>
+<li><strong>Reels:</strong> average watch time and skip rate show whether your hook works.</li></ul>
+<h3>Meta Business Suite</h3>
+<p>Combines Facebook and Instagram results, shows trends over time and lets you export data.</p>
+<h3>TikTok Analytics</h3>
+<ul><li>Video views, average watch time and the % who watched the full video.</li>
+<li><strong>Traffic source:</strong> For You vs Following vs search tells you how you're being discovered.</li>
+<li>Follower activity: when your audience is online.</li></ul>
+<div class="callout"><b>Look for patterns, not single posts</b>One viral post can be luck. Look across 10–20 posts: which pillar, format, hook style and length consistently does best?</div>`,
+takeaways:["Check insights weekly, review deeply monthly.","Sort content by saves, shares and watch time to find winners.","Look for patterns across many posts."]},
+{title:"Testing & optimisation", body:`
+<p>Great social media managers treat content as a series of experiments. Each week you learn a little more about what your audience wants.</p>
+<h3>The optimisation loop</h3>
+<ol><li><strong>Measure:</strong> collect the numbers.</li>
+<li><strong>Analyse:</strong> what performed above or below average, and why?</li>
+<li><strong>Hypothesise:</strong> "Reels with a question hook will get more watch time."</li>
+<li><strong>Test:</strong> post 3–4 pieces that test the idea.</li>
+<li><strong>Decide:</strong> do more of what wins, drop what doesn't.</li></ol>
+<h3>What to test</h3>
+<ul><li>Hook styles (question vs bold statement vs result-first)</li>
+<li>Formats (Reel vs carousel vs static)</li>
+<li>Video length (10 sec vs 30 sec vs 60 sec)</li>
+<li>Topics within each pillar</li>
+<li>CTAs ("Save this" vs "DM us" vs "Comment PRICE")</li>
+<li>Posting days and times</li></ul>
+<div class="callout"><b>Give it time</b>Social media growth compounds. Judge a strategy over about 90 days of consistent effort, not after one week.</div>`,
+takeaways:["Measure → analyse → hypothesise → test → decide.","Test one idea across several posts.","Judge a strategy over months, not days."]},
+{title:"Reporting to clients & bosses", body:`
+<p>A good report proves your value and keeps clients paying. A bad report is a screenshot of follower numbers. Clients want to know: <strong>is this working, and what's next?</strong></p>
+<h3>A one-page monthly report structure</h3>
+<ol><li><strong>Summary:</strong> 3 sentences on the month's results in plain language.</li>
+<li><strong>Goal tracker:</strong> KPI vs target (e.g. enquiries: 48 of 60 target).</li>
+<li><strong>Key numbers:</strong> reach, engagement rate, follower growth, link clicks, enquiries, with change vs last month.</li>
+<li><strong>Top 3 posts:</strong> with a note on why they worked.</li>
+<li><strong>What didn't work:</strong> and what you learned.</li>
+<li><strong>Ads summary</strong> (if running): spend, results, cost per result, ROAS.</li>
+<li><strong>Next month's plan:</strong> 3 specific actions.</li></ol>
+<div class="example"><span class="mono">Summary example</span>"October was our strongest month yet. Reach grew 38% thanks to the new 'myth-busting' Reels, and WhatsApp enquiries rose from 31 to 48. In November we'll make more myth-busting videos and launch a small retargeting ad for people who watched them."</div>
+<p>Use simple charts, highlight changes with arrows or colour, and avoid jargon. Send it on the same day every month.</p>`,
+takeaways:["Reports answer: is it working, and what's next?","Compare KPIs against goals and last month.","Always end with a clear plan."]}
+],
+videos:[
+{id:"aKi5iO9O-zk",title:"The 10 Most Important Social Media Metrics & KPIs",focus:"Match each metric to the business goals from Module 2."},
+{id:"EOrUj7o1j-0",title:"Social Media KPIs to Track for ROI (Not Just Likes or Follows)",focus:"Note how to connect social metrics to money."},
+{id:"AA3pLUwmgcE",title:"How to Build a Social Media Report (+ Free Template)",focus:"Build your first report as you watch."}
+],
+assignment:{title:"Your first performance report",steps:[
+"Open the insights of any account you manage (or your personal professional account).",
+"Record the last 30 days: reach, engagement rate, follower growth, link clicks and messages.",
+"Find the top 3 and bottom 3 posts and write one reason for each.",
+"Write one hypothesis to test next month.",
+"Put it all into a one-page report using the structure in Lesson 4."],
+deliver:"A one-page monthly report with summary, KPIs, top posts, lessons and next steps."},
+quiz:[
+{q:"What's the difference between reach and impressions?",o:["They're the same","Reach = unique people; impressions = total times displayed","Impressions = unique people; reach = clicks","Reach counts only ads"],a:1,why:"One person can generate many impressions but counts once in reach."},
+{q:"A post got 120 engagements and reached 3,000 people. What is the engagement rate by reach?",o:["2%","4%","25%","0.4%"],a:1,why:"120 ÷ 3,000 × 100 = 4%."},
+{q:"Which is a 'vanity' metric when your goal is sales?",o:["Bookings","Follower count alone","WhatsApp enquiries","Link clicks to checkout"],a:1,why:"Follower count alone doesn't show business results."},
+{q:"In TikTok Analytics, 'traffic source' tells you…",o:["Your internet speed","How viewers found your video (For You, Following, search)","Your follower's names","Your ad budget"],a:1,why:"Traffic source shows how your content is being discovered."},
+{q:"Why look at patterns across many posts?",o:["One viral post can be luck","It's required by Instagram","To delete old posts","It isn't useful"],a:0,why:"Patterns reveal what consistently works. One outlier can mislead."},
+{q:"What is the correct order of the optimisation loop?",o:["Test → Guess → Stop","Measure → Analyse → Hypothesise → Test → Decide","Post → Hope → Repeat","Decide → Measure → Post"],a:1,why:"This loop turns data into steady improvement."},
+{q:"What should every client report end with?",o:["An invoice only","A clear plan for next month","A list of hashtags","Nothing"],a:1,why:"Clients want to know what's next, which shows strategy and keeps trust."},
+{q:"Over what period should you judge a new social strategy?",o:["1 day","1 week","Around 90 days of consistent effort","5 years"],a:2,why:"Growth compounds and needs consistency and data over time."}
+]
+},
+{
+title:"Building Your Social Media Career",
+tag:"Package your skills into services, price with confidence, find and win clients, and run professional, long-term client relationships. Includes the capstone project.",
+hours:"4 hrs",
+outcomes:["Design service packages","Price your work","Find and pitch clients","Onboard and retain clients professionally"],
+lessons:[
+{title:"Your offer & services", body:`
+<p>Whether you manage your own brand, your employer's or clients' accounts, these skills are valuable. If you choose to offer them as a service, package them clearly so buyers understand exactly what they get.</p>
+<h3>Common services</h3>
+<ul><li><strong>Social media audit:</strong> a one-off review with recommendations.</li>
+<li><strong>Strategy:</strong> goals, persona, pillars, content plan.</li>
+<li><strong>Content creation:</strong> graphics, Reels, captions.</li>
+<li><strong>Full management:</strong> content + scheduling + community management + reporting.</li>
+<li><strong>Paid ads management:</strong> setup, optimisation, reporting (ad spend paid separately).</li>
+<li><strong>Training/coaching:</strong> teaching business owners to do it themselves.</li></ul>
+<h3>Package it in tiers</h3>
+<div class="tbl"><table><tr><th>Package</th><th>Example inclusions</th></tr>
+<tr><td>Starter</td><td>1 platform, 8 posts/month, basic captions, monthly report</td></tr>
+<tr><td>Growth</td><td>2 platforms, 12 posts incl. 4 Reels, Stories, community management, report</td></tr>
+<tr><td>Premium</td><td>Everything in Growth + ads management + content shoot + strategy call</td></tr></table></div>
+<div class="callout"><b>Pick a niche if you can</b>"Social media for clinics and health professionals" is easier to market and justifies higher pricing than "social media for everyone".</div>`,
+takeaways:["Package your skills into clear services.","Tiered packages make it easy for clients to say yes.","A niche makes marketing and pricing easier."]},
+{title:"Pricing your work", body:`
+<p>Pricing is where many new social media managers struggle. Price based on the value delivered and the work required, not on fear.</p>
+<h3>A simple pricing formula</h3>
+<div class="example"><span class="mono">Formula</span>Monthly price = (estimated hours per month × your hourly rate) + tools and costs + profit margin</div>
+<h3>Factors that raise your price</h3>
+<ul><li>Number of platforms and posts</li><li>Video production (more time than graphics)</li><li>Community management hours</li><li>Ads management</li><li>Your results, case studies and niche expertise</li><li>Urgency and the client's business size</li></ul>
+<h3>Protect yourself</h3>
+<ul><li>Charge monthly retainers, paid <strong>upfront</strong> (or at least 50% upfront for projects).</li>
+<li>Ad spend is always paid by the client, separately from your fee.</li>
+<li>Define exactly what's included. Extra requests are quoted separately to avoid <strong>scope creep</strong>.</li>
+<li>Set a minimum commitment (e.g. 3 months), since results take time.</li>
+<li>Review your prices every 6–12 months as your skills and results grow.</li></ul>`,
+takeaways:["Price from hours, costs and value, not fear.","Get paid upfront and keep ad spend separate.","Define scope clearly to prevent scope creep."]},
+{title:"Finding clients & pitching", body:`
+<p>Your own social media is your best portfolio. Show what you can do by doing it for yourself first.</p>
+<h3>Where clients come from</h3>
+<ol><li><strong>Your own content:</strong> post tips, before-and-after page transformations and results.</li>
+<li><strong>Your network:</strong> tell friends, family, colleagues and past employers what you do. Referrals convert best.</li>
+<li><strong>Free mini-audits:</strong> record a short video or write a note showing a business 3 quick improvements. It shows skill immediately.</li>
+<li><strong>Local businesses:</strong> clinics, salons, restaurants, schools and boutiques with weak pages are opportunities.</li>
+<li><strong>LinkedIn:</strong> connect with business owners and share expertise.</li>
+<li><strong>Partnerships:</strong> web designers, photographers and printers can refer clients to you.</li></ol>
+<h3>The discovery call</h3>
+<p>Ask more than you talk: What are your goals? Who are your best customers? What have you tried? What does success look like in 3 months? What's your budget?</p>
+<h3>The proposal</h3>
+<ul><li>Their goals in their own words</li><li>Your recommended approach</li><li>Package options with prices</li><li>Timeline and what you need from them</li><li>Clear next step: "Pay the deposit to start on the 1st"</li></ul>
+<div class="callout"><b>Build case studies early</b>Even one project, including a discounted or volunteer one, with documented before-and-after numbers makes future selling much easier.</div>`,
+takeaways:["Your own page is your portfolio.","Free mini-audits and referrals win clients fastest.","Listen on discovery calls, then propose clear options."]},
+{title:"Onboarding, contracts & retention", body:`
+<p>Winning a client is the start. Keeping them for years is where the real value is.</p>
+<h3>Professional onboarding</h3>
+<ul><li><strong>Contract signed and deposit paid</strong> before any work starts.</li>
+<li><strong>Onboarding form:</strong> brand info, audience, competitors, logins needed, brand assets, offers, do's and don'ts.</li>
+<li><strong>Secure access:</strong> use Meta Business Manager partner access and platform team roles. Avoid asking for personal passwords.</li>
+<li><strong>Kick-off call:</strong> confirm goals, approval process and communication channel.</li></ul>
+<h3>What the contract should cover</h3>
+<ul><li>Scope of work and deliverables</li><li>Fees, payment dates and late payment terms</li><li>Revision limits and approval timelines</li><li>Content ownership and usage</li><li>Confidentiality</li><li>Notice period to end the agreement</li></ul>
+<h3>Retention habits</h3>
+<ul><li>Send reports on time, every month.</li><li>Communicate proactively and share wins quickly.</li><li>Bring new ideas before they ask.</li><li>Do quarterly strategy reviews.</li><li>Be reliable. Consistency is what clients remember.</li></ul>`,
+takeaways:["Contract and deposit before work begins.","Use partner access, not shared passwords.","Reliability and proactive ideas keep clients long-term."]}
+],
+videos:[
+{id:"AwkF9auMRJM",title:"30 Steps to Become a Social Media Manager in 30 Days!",focus:"Turn the steps into your own 30-day action list."},
+{id:"vU1cgUB5HyI",title:"How to Book Social Media Management Clients Step-by-Step",focus:"Note the outreach and discovery-call process."},
+{id:"OuC2OpFD36E",title:"How to Start Working as a Social Media Manager: Strategy, Tools & Clients",focus:"Compare the tools and workflow with what you learned in Module 5."}
+],
+assignment:{title:"Capstone: 30-day social media plan",steps:[
+"Choose a real business (yours, a friend's, or one you would love to work with).",
+"Strategy: SMART goal, persona, platforms, brand voice and 4 content pillars (Modules 1–2).",
+"Platform setup: profile improvements and WhatsApp Business setup (Module 3).",
+"Content: a 30-day calendar with 12+ posts, including at least 3 finished pieces: 1 carousel, 1 Reel and 1 Story set (Modules 4–5).",
+"Community: saved replies and a crisis plan (Module 6).",
+"Ads: one campaign plan with objective, audiences and budget (Module 7).",
+"Measurement: the KPIs you'll track and a report template (Module 8).",
+"Business: a package and price you'd offer this client (Module 9)."],
+deliver:"A complete 30-day plan you can use as your first portfolio piece."},
+quiz:[
+{q:"Why use tiered packages (Starter, Growth, Premium)?",o:["To confuse clients","To make it easy for clients to pick an option that fits","Because it's the law","To charge everyone the same"],a:1,why:"Clear options make decisions easier and allow upgrades."},
+{q:"Who should pay for ad spend?",o:["The social media manager","The client, separately from the management fee","Nobody","The influencer"],a:1,why:"Ad spend is the client's cost. Your fee covers your work."},
+{q:"What is 'scope creep'?",o:["A type of ad","Clients gradually asking for more than was agreed without paying more","A hashtag strategy","A design style"],a:1,why:"Define scope and quote extra work separately."},
+{q:"What is the best portfolio for a new social media manager?",o:["A long CV","Your own well-run social media page plus case studies","A business card","Nothing"],a:1,why:"Showing results beats describing skills."},
+{q:"What is a free mini-audit?",o:["A tax inspection","A short review showing a business quick improvements, to demonstrate your skill","A legal document","A paid ad"],a:1,why:"It gives value upfront and starts a sales conversation."},
+{q:"What should happen BEFORE work starts with a new client?",o:["Post immediately","Contract signed and deposit paid","Ask for their personal password","Change their logo"],a:1,why:"This protects both sides and sets professional expectations."},
+{q:"What's the safest way to get access to a client's Facebook/Instagram?",o:["Ask for their personal password","Meta Business Manager partner access and team roles","Create a fake account","Share one login among everyone"],a:1,why:"Partner access is secure and can be removed easily."},
+{q:"Which habit best keeps clients long-term?",o:["Late reports","Reliability, proactive ideas and clear monthly reports","Avoiding calls","Raising prices monthly"],a:1,why:"Consistency and proactive value build loyalty."}
+]
+}
+];
+/* ======================= STATE ======================= */
+const KEY = "smm-masterclass-v2";
+let S = { read:{}, watched:{}, quiz:{}, name:"" };
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e) {}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+const passed = m => !!(S.quiz[m] && S.quiz[m].passed);
+const unlocked = m => m === 0 || passed(m-1);
+const lessonsDone = m => MODULES[m].lessons.every((_,i)=>S.read[m+"-"+i]);
+const doneCount = () => MODULES.filter((_,m)=>passed(m)).length;
+const allDone = () => doneCount() === MODULES.length;
+const totalLessons = MODULES.reduce((a,m)=>a+m.lessons.length,0);
+const totalVideos = MODULES.reduce((a,m)=>a+m.videos.length,0);
+const totalQs = MODULES.reduce((a,m)=>a+m.quiz.length,0);
+const app = document.getElementById("app");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad = n => String(n).padStart(2,"0");
+const ICON = {
+lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
+check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>',
+play:'<svg viewBox="0 0 24 24" fill="#1B1406"><path d="M7 4.5v15l13-7.5z"/></svg>',
+arrow:'<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>'
+};
+function toast(msg){ const t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("show"),2600); }
+function updateBar(){
+const d = doneCount();
+document.getElementById("progTxt").textContent = d + " of " + MODULES.length + " modules";
+document.getElementById("progFill").style.width = (d/MODULES.length*100) + "%";
+}
+function toTop(){ try{ window.scrollTo(0,0); }catch(e){} }
+/* ======================= HOME ======================= */
+function renderHome(){
+const next = MODULES.findIndex((_,m)=>!passed(m));
+const started = Object.keys(S.read).length > 0 || doneCount() > 0;
+const ctaLabel = allDone() ? "View your certificate" : (started ? "Continue Module " + (next+1) : "Start Module 1");
+app.innerHTML = `
+<section class="hero"><div class="wrap">
+<div>
+<span class="gift mono"><i></i>Self-paced · Theory + practical · Certificate included</span>
+<h1>Social Media Marketing <em>Masterclass</em></h1>
+<p class="lede">A complete, step-by-step programme that takes you from the foundations of social media to strategy, content, ads, analytics and running it as a professional. Every module pairs clear theory with practical video lessons you can follow on YouTube.</p>
+<div class="ctas">
+<button class="btn btn-gold" id="startBtn" type="button">${ctaLabel}</button>
+<a class="btn btn-ghost" href="#curriculum">See the curriculum</a>
+</div>
+</div>
+<div class="stats" aria-label="Course at a glance">
+<div><b>${MODULES.length}</b><span>Modules</span></div>
+<div><b>${totalLessons}</b><span>In-depth lessons</span></div>
+<div><b>${totalVideos}</b><span>Practical video labs</span></div>
+<div><b>${totalQs}</b><span>Quiz questions</span></div>
+</div>
+</div></section>
+<section class="section"><div class="wrap">
+<div class="sec-head"><div><span class="mono eyebrow">How it works</span><h2>Learn, practise, prove it, unlock</h2></div></div>
+<ol class="how">
+<li><h3>Read the lessons</h3><p>Clear theory with real examples, tables and key takeaways. Mark each lesson as complete.</p></li>
+<li><h3>Watch the practical lab</h3><p>Hand-picked YouTube tutorials show you how to do it on the actual apps.</p></li>
+<li><h3>Do the assignment</h3><p>Apply what you learned to a real business so the skills stick.</p></li>
+<li><h3>Pass the quiz</h3><p>Score 70% or more to unlock the next module. You can retake it as often as you need.</p></li>
+</ol>
+</div></section>
+<section class="section" id="curriculum" style="padding-top:8px"><div class="wrap">
+<div class="sec-head"><div><span class="mono eyebrow">Curriculum</span><h2>Nine modules, one clear path</h2></div><p>Each module opens when you pass the quiz before it.</p></div>
+<div class="path">${MODULES.map((m,i)=>modRow(m,i)).join("")}</div>
+<div class="cert-teaser">
+<div><h3>Certificate of Completion</h3><p>${allDone() ? "You've passed every module. Your certificate is ready." : "Pass all nine module quizzes to unlock your personalised certificate."}</p></div>
+<button class="btn ${allDone() ? "btn-primary" : "btn-line"}" id="certBtn" type="button" ${allDone() ? "" : "disabled"}>${allDone() ? "Open certificate" : ICON.lock.replace('<svg','<svg width="16" height="16"') + " Locked"}</button>
+</div>
+</div></section>`;
+document.getElementById("startBtn").onclick = () => allDone() ? renderCert() : openModule(next);
+document.querySelectorAll(".mod").forEach(b => b.onclick = () => openModule(+b.dataset.m));
+const cb = document.getElementById("certBtn"); if (cb && allDone()) cb.onclick = renderCert;
+updateBar();
+}
+function modRow(m,i){
+const isDone = passed(i), isOpen = unlocked(i);
+const chip = isDone ? `<span class="chip done">${ICON.check} Completed</span>` : isOpen ? `<span class="chip open">${Object.keys(S.read).some(k=>k.startsWith(i+"-"))?"In progress":"Open"}</span>` : `<span class="chip lock">${ICON.lock} Locked</span>`;
+const best = S.quiz[i] ? ` · <span>Best score ${S.quiz[i].best}/${m.quiz.length}</span>` : "";
+return `<button class="mod ${isDone?"done":""}" data-m="${i}" type="button" ${isOpen?"":"disabled"} aria-label="Module ${i+1}: ${esc(m.title)}${isOpen?"":" (locked)"}">
+<span class="num">${isDone?ICON.check.replace('<svg','<svg width="26" height="26"'):pad(i+1)}</span>
+<span><h3>${esc(m.title)}</h3><p>${esc(m.tag)}</p>
+<span class="meta mono"><span>${m.lessons.length} lessons</span><span>${m.videos.length} videos</span><span>${m.quiz.length} questions</span><span>${m.hours}</span>${best}</span></span>
+<span class="st">${chip}</span></button>`;
+}
+/* ======================= MODULE ======================= */
+let cur = { m:0, tab:"lessons", l:0 };
+function openModule(m, tab){
+if (!unlocked(m)) { toast("Pass Module " + m + " to unlock this one."); return; }
+const firstUnread = MODULES[m].lessons.findIndex((_,i)=>!S.read[m+"-"+i]);
+cur = { m, tab: tab || "lessons", l: firstUnread < 0 ? 0 : firstUnread };
+renderModule(); toTop();
+}
+function renderModule(){
+const m = MODULES[cur.m], i = cur.m;
+const readN = m.lessons.filter((_,k)=>S.read[i+"-"+k]).length;
+const tabs = [
+["lessons","Lessons", readN+"/"+m.lessons.length],
+["lab",'<span class="tl">Practical lab</span><span class="ts">Videos</span>', m.videos.length+" videos"],
+["assign",'<span class="tl">Assignment</span><span class="ts">Task</span>',""],
+["quiz","Quiz", passed(i) ? "passed" : (lessonsDone(i) ? "ready" : "locked")]
+];
+app.innerHTML = `
+<section class="mhead"><div class="wrap">
+<button class="back" id="backBtn" type="button">${ICON.arrow} All modules</button>
+<div class="mono" style="color:var(--hero-muted);margin-top:18px">Module ${pad(i+1)} of ${pad(MODULES.length)} · ${m.hours}</div>
+<h1>${esc(m.title)}</h1>
+<p class="tag">${esc(m.tag)}</p>
+<div class="outcomes">${m.outcomes.map(o=>`<span>${esc(o)}</span>`).join("")}</div>
+<div class="tabs" role="tablist">${tabs.map(([k,l,n])=>`<button class="tab" role="tab" type="button" data-tab="${k}" aria-selected="${cur.tab===k}">${l}${n?` <span class="n">${n}</span>`:""}${k==="quiz"&&!lessonsDone(i)&&!passed(i)?ICON.lock:""}</button>`).join("")}</div>
+</div></section>
+<div class="wrap" id="tabBody"></div>`;
+document.getElementById("backBtn").onclick = () => { renderHome(); toTop(); };
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => { cur.tab = t.dataset.tab; renderModule(); });
+({lessons:renderLessons, lab:renderLab, assign:renderAssign, quiz:renderQuiz})[cur.tab]();
+updateBar();
+}
+function renderLessons(){
+const m = MODULES[cur.m], i = cur.m, L = m.lessons[cur.l], key = i+"-"+cur.l, isRead = !!S.read[key];
+const last = cur.l === m.lessons.length-1;
+document.getElementById("tabBody").innerHTML = `
+<div class="reader">
+<nav class="toc" aria-label="Lessons">${m.lessons.map((l,k)=>`<button type="button" data-l="${k}" aria-current="${k===cur.l}"><span class="dot ${S.read[i+"-"+k]?"ok":""}">${S.read[i+"-"+k]?ICON.check.replace('<svg','<svg width="12" height="12"'):k+1}</span><span>${esc(l.title)}</span></button>`).join("")}</nav>
+<article class="lesson">
+<span class="mono kicker">Lesson ${i+1}.${cur.l+1}</span>
+<h2>${esc(L.title)}</h2>
+<div class="prose">${L.body}</div>
+<div class="takeaways"><h4>Key takeaways</h4><ul>${L.takeaways.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
+<div class="lnav">
+<button class="btn btn-line" type="button" id="prevL" ${cur.l===0?"disabled":""}>Previous</button>
+<button class="btn btn-primary" type="button" id="doneL">${isRead ? (last ? "Go to practical lab" : "Next lesson") : (last ? "Mark complete & go to lab" : "Mark complete & continue")}</button>
+</div>
+</article>
+</div>`;
+document.querySelectorAll(".toc button").forEach(b => b.onclick = () => { cur.l = +b.dataset.l; renderLessons(); scrollToBody(); });
+document.getElementById("prevL").onclick = () => { cur.l--; renderLessons(); scrollToBody(); };
+document.getElementById("doneL").onclick = () => {
+if (!S.read[key]) { S.read[key] = true; save(); }
+if (last) { cur.tab = "lab"; renderModule(); if (lessonsDone(i)) toast("All lessons complete. The quiz is now open."); }
+else { cur.l++; renderModule(); }
+scrollToBody();
+};
+const calc = document.getElementById("erCalc");
+if (calc) {
+const f = () => { const e=+document.getElementById("erEng").value||0, r=+document.getElementById("erReach").value||0;
+document.getElementById("erOut").textContent = r>0 ? (e/r*100).toFixed(1)+"%" : "–";
+document.getElementById("erNote").textContent = r>0 ? e.toLocaleString()+" ÷ "+r.toLocaleString()+" × 100" : "Enter a reach above 0"; };
+calc.addEventListener("input", f); f();
+}
+}
+function scrollToBody(){ const b=document.getElementById("tabBody"); if(b){ const y=b.getBoundingClientRect().top+window.scrollY-70; if (window.scrollY>y) window.scrollTo({top:y}); } }
+function renderLab(){
+const m = MODULES[cur.m], i = cur.m;
+document.getElementById("tabBody").innerHTML = `
+<div class="panel">
+<p class="intro">Watch these on YouTube, ideally with the app open beside you so you can follow along. Each card says what to focus on. Tick a video when you've watched it.</p>
+<div class="videos">${m.videos.map((v,k)=>{ const key=i+"-"+k; return `
+<div class="video">
+<a class="thumb" href="${YT(v.id)}" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube: ${esc(v.title)}">
+<span class="mono lbl">Lab ${i+1}.${k+1}</span><span class="play">${ICON.play}</span><span class="mono yt">YouTube ↗</span></a>
+<div class="vb"><h4>${esc(v.title)}</h4><p><strong>Focus:</strong> ${esc(v.focus)}</p></div>
+<div class="vf"><label class="check" for="w${key}"><input type="checkbox" id="w${key}" data-k="${key}" ${S.watched[key]?"checked":""}> Watched</label>
+<a class="vlink" href="${YT(v.id)}" target="_blank" rel="noopener noreferrer">Watch now ↗</a></div>
+</div>`; }).join("")}</div>
+<div class="lnav" style="margin-top:24px"><span></span><button class="btn btn-primary" type="button" id="toAssign">Continue to assignment</button></div>
+</div>`;
+document.querySelectorAll(".video input").forEach(c => c.onchange = () => { S.watched[c.dataset.k] = c.checked; save(); });
+document.getElementById("toAssign").onclick = () => { cur.tab="assign"; renderModule(); scrollToBody(); };
+}
+function renderAssign(){
+const a = MODULES[cur.m].assignment;
+document.getElementById("tabBody").innerHTML = `
+<div class="panel">
+<div class="assign">
+<span class="mono eyebrow">Practical assignment</span>
+<h3>${esc(a.title)}</h3>
+<p style="color:var(--muted)">Putting the lesson into practice is what turns knowledge into skill. Complete these steps on a real business.</p>
+<ol>${a.steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol>
+<div class="deliver"><b>What you'll have at the end:</b> ${esc(a.deliver)}</div>
+</div>
+<div class="lnav" style="margin-top:24px;max-width:820px"><span></span><button class="btn btn-primary" type="button" id="toQuiz">Go to the quiz</button></div>
+</div>`;
+document.getElementById("toQuiz").onclick = () => { cur.tab="quiz"; renderModule(); scrollToBody(); };
+}
+let answers = {}, submitted = false;
+function renderQuiz(){
+const m = MODULES[cur.m], i = cur.m, body = document.getElementById("tabBody");
+if (!lessonsDone(i) && !passed(i)) {
+const left = m.lessons.length - m.lessons.filter((_,k)=>S.read[i+"-"+k]).length;
+body.innerHTML = `<div class="panel"><div class="gate"><span class="chip lock">${ICON.lock} Quiz locked</span><h3>Finish the lessons first</h3><p>Mark all ${m.lessons.length} lessons complete to open this quiz. ${left} ${left===1?"lesson":"lessons"} left.</p><button class="btn btn-primary" type="button" id="goL">Back to lessons</button></div></div>`;
+document.getElementById("goL").onclick = () => { cur.tab="lessons"; cur.l = Math.max(0,m.lessons.findIndex((_,k)=>!S.read[i+"-"+k])); renderModule(); };
+return;
+}
+answers = {}; submitted = false;
+const need = Math.ceil(m.quiz.length*PASS);
+body.innerHTML = `<div class="panel"><div class="quiz" id="quiz">
+<p class="intro" style="margin:0">${m.quiz.length} questions · pass mark ${need}/${m.quiz.length} (70%)${passed(i) ? " · You've already passed. Retake it any time to practise." : ""}</p>
+<div id="res"></div>
+${m.quiz.map((q,k)=>`<div class="q" id="q${k}"><fieldset><legend><span class="mono">Q${k+1}</span><span>${esc(q.q)}</span></legend>
+${q.o.map((o,j)=>`<label class="opt" for="q${k}o${j}"><input type="radio" name="q${k}" id="q${k}o${j}" value="${j}"><span>${esc(o)}</span></label>`).join("")}
+<div class="why" hidden></div></fieldset></div>`).join("")}
+<div class="qfoot"><span id="ansCt">0 of ${m.quiz.length} answered</span><button class="btn btn-primary" type="button" id="submitQ" disabled>Submit answers</button></div>
+</div></div>`;
+body.querySelectorAll('input[type="radio"]').forEach(r => r.onchange = () => {
+if (submitted) return;
+answers[r.name.slice(1)] = +r.value;
+const n = Object.keys(answers).length;
+document.getElementById("ansCt").textContent = n + " of " + m.quiz.length + " answered";
+document.getElementById("submitQ").disabled = n < m.quiz.length;
+});
+document.getElementById("submitQ").onclick = gradeQuiz;
+}
+function gradeQuiz(){
+const m = MODULES[cur.m], i = cur.m; submitted = true;
+let score = 0;
+m.quiz.forEach((q,k)=>{
+const pick = answers[k], box = document.getElementById("q"+k), ok = pick === q.a;
+if (ok) score++;
+box.querySelectorAll(".opt").forEach((o,j)=>{ o.querySelector("input").disabled = true; if (j===q.a) o.classList.add("right"); else if (j===pick) o.classList.add("wrong"); });
+const w = box.querySelector(".why"); w.hidden = false; w.innerHTML = `<b>${ok?"Correct.":"Not quite."}</b> ${esc(q.why)}`;
+});
+const need = Math.ceil(m.quiz.length*PASS), ok = score >= need, wasPassed = passed(i);
+const prev = S.quiz[i] || {best:0, passed:false};
+S.quiz[i] = { best: Math.max(prev.best, score), passed: prev.passed || ok };
+save(); updateBar();
+const isLast = i === MODULES.length-1;
+const res = document.getElementById("res");
+res.innerHTML = ok
+? `<div class="result pass"><span class="mono">Passed</span><span class="score">${score}/${m.quiz.length}</span><p>${isLast ? "Outstanding. You've completed the whole masterclass and your certificate is ready." : (wasPassed ? "Great revision score." : "Well done. Module "+(i+2)+" is now unlocked.")}</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px">${isLast ? `<button class="btn btn-primary" type="button" id="nextBtn">Open my certificate</button>` : `<button class="btn btn-primary" type="button" id="nextBtn">Start Module ${i+2}</button>`}<button class="btn btn-line" type="button" id="homeB">All modules</button></div></div>`
+: `<div class="result fail"><span class="mono">Not yet</span><span class="score">${score}/${m.quiz.length}</span><p>You need ${need} correct to pass. Review the explanations below, revisit the lessons, then try again.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px"><button class="btn btn-primary" type="button" id="retry">Retake quiz</button><button class="btn btn-line" type="button" id="review">Review lessons</button></div></div>`;
+document.getElementById("submitQ").disabled = true;
+document.getElementById("submitQ").textContent = "Submitted";
+const y = res.getBoundingClientRect().top + window.scrollY - 90; window.scrollTo({top:y, behavior:"smooth"});
+if (ok) {
+document.getElementById("nextBtn").onclick = () => isLast ? renderCert() : openModule(i+1);
+document.getElementById("homeB").onclick = () => { renderHome(); toTop(); };
+if (!wasPassed) toast(isLast ? "Masterclass complete!" : "Module " + (i+2) + " unlocked");
+} else {
+document.getElementById("retry").onclick = () => { renderQuiz(); scrollToBody(); };
+document.getElementById("review").onclick = () => { cur.tab="lessons"; cur.l=0; renderModule(); scrollToBody(); };
+}
+}
+/* ======================= CERTIFICATE ======================= */
+function renderCert(){
+if (!allDone()) { renderHome(); return; }
+if (!S.done) { S.done = new Date().toISOString(); save(); }
+app.innerHTML = `
+<section class="mhead"><div class="wrap" style="padding-bottom:30px">
+<button class="back" id="backBtn" type="button">${ICON.arrow} All modules</button>
+<h1>Congratulations</h1><p class="tag">You completed all ${MODULES.length} modules of the Social Media Marketing Masterclass.</p>
+</div></section>
+<div class="wrap certwrap">
+<div class="certctl">
+<label for="certName">Name on certificate<input id="certName" type="text" maxlength="48" placeholder="Type your full name" value="${esc(S.name||"")}"></label>
+<button class="btn btn-primary" type="button" id="dlCert" hidden>Save certificate (PNG)</button>
+</div>
+<canvas id="cert" width="1600" height="1130" role="img" aria-label="Certificate of completion"></canvas>
+<p class="note" id="certNote">Tip: you can also take a screenshot of your certificate to share it.</p>
+</div>`;
+document.getElementById("backBtn").onclick = () => { renderHome(); toTop(); };
+const inp = document.getElementById("certName");
+inp.oninput = () => { S.name = inp.value; save(); drawCert(); };
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(drawCert);
+drawCert(); toTop(); updateBar(); setupDownload();
+}
+function drawCert(){
+const c = document.getElementById("cert"); if (!c) return;
+const x = c.getContext("2d"), W = c.width, H = c.height;
+const G="#0B3A30", GOLD="#B9811A", INK="#13201B", MUTED="#5A6863";
+x.fillStyle="#FFFDF8"; x.fillRect(0,0,W,H);
+x.fillStyle=G; x.fillRect(0,0,W,22); x.fillRect(0,H-22,W,22);
+x.strokeStyle=GOLD; x.lineWidth=3; x.strokeRect(50,60,W-100,H-120);
+x.lineWidth=1; x.strokeRect(64,74,W-128,H-148);
+x.fillStyle=G; x.beginPath(); x.roundRect ? x.roundRect(W/2-34,120,68,68,16) : x.rect(W/2-34,120,68,68); x.fill();
+x.strokeStyle="#FFFFFF"; x.lineWidth=5; x.lineCap="round";
+[[W/2-18,172,W/2-18,150],[W/2-2,172,W/2-2,136],[W/2+14,172,W/2+14,156]].forEach(([a,b,cx,d])=>{x.beginPath();x.moveTo(a,b);x.lineTo(cx,d);x.stroke();});
+x.textAlign="center"; x.fillStyle=GOLD; x.font='600 22px "JetBrains Mono", monospace';
+x.fillText("CERTIFICATE OF COMPLETION", W/2, 250);
+x.fillStyle=INK; x.font='800 64px "Bricolage Grotesque", sans-serif';
+x.fillText("Social Media Marketing Masterclass", W/2, 330);
+x.fillStyle=MUTED; x.font='400 28px "Figtree", sans-serif';
+x.fillText("This certifies that", W/2, 420);
+const nm = (S.name||"").trim() || "Your Name";
+let fs = 92; x.font = `800 ${fs}px "Bricolage Grotesque", sans-serif`;
+while (x.measureText(nm).width > W-320 && fs > 40) { fs -= 4; x.font = `800 ${fs}px "Bricolage Grotesque", sans-serif`; }
+x.fillStyle=G; x.fillText(nm, W/2, 525);
+x.strokeStyle=GOLD; x.lineWidth=2; x.beginPath(); x.moveTo(W/2-300,560); x.lineTo(W/2+300,560); x.stroke();
+x.fillStyle=MUTED; x.font='400 27px "Figtree", sans-serif';
+x.fillText("has completed all nine modules and passed every assessment, covering strategy,", W/2, 625);
+x.fillText("platforms, content creation, scheduling, community, paid ads, analytics and career skills.", W/2, 665);
+const d = new Date(S.done || Date.now()).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+const total = MODULES.reduce((a,m,i)=>a+((S.quiz[i]&&S.quiz[i].best)||0),0);
+x.font='600 20px "JetBrains Mono", monospace'; x.fillStyle=GOLD;
+x.fillText(`${MODULES.length} MODULES · ${totalLessons} LESSONS · QUIZ SCORE ${total}/${totalQs}`, W/2, 740);
+x.textAlign="left"; x.fillStyle=INK; x.font='700 32px "Bricolage Grotesque", sans-serif'; x.fillText("Emerie Jane", 180, 900);
+x.strokeStyle=INK; x.lineWidth=1.5; x.beginPath(); x.moveTo(180,915); x.lineTo(560,915); x.stroke();
+x.fillStyle=MUTED; x.font='400 22px "Figtree", sans-serif'; x.fillText("Course facilitator", 180, 950);
+x.textAlign="right"; x.fillStyle=INK; x.font='700 32px "Bricolage Grotesque", sans-serif'; x.fillText(d, W-180, 900);
+x.beginPath(); x.moveTo(W-560,915); x.lineTo(W-180,915); x.stroke();
+x.fillStyle=MUTED; x.font='400 22px "Figtree", sans-serif'; x.fillText("Date of completion", W-180, 950);
+x.textAlign="center"; x.fillStyle=GOLD; x.beginPath(); x.arc(W/2, 905, 62, 0, Math.PI*2); x.fill();
+x.fillStyle="#FFFDF8"; x.font='800 30px "Bricolage Grotesque", sans-serif'; x.fillText("SMM", W/2, 902);
+x.font='600 14px "JetBrains Mono", monospace'; x.fillText("CERTIFIED", W/2, 928);
+}
+async function setupDownload(){
+try {
+if (!window.claude || !window.claude.use) return;
+const dl = await window.claude.use("downloads");
+const btn = document.getElementById("dlCert");
+if (!dl || !btn) return;
+btn.hidden = false;
+btn.onclick = () => {
+document.getElementById("cert").toBlob(async blob => {
+if (!blob) return;
+const safe = ((S.name||"Certificate").replace(/[^\w .-]/g,"").trim() || "Certificate");
+try { await dl.save({ filename: safe + " - SMM Masterclass Certificate.png", data: blob }); toast("Certificate saved"); }
+catch(e){ if (e && (e.code==="unavailable"||e.code==="not_granted"||e.code==="capability_disabled")) btn.hidden = true; else if (e && e.code==="declined") toast("Save cancelled"); else toast("Couldn't save right now. Take a screenshot instead."); }
+}, "image/png");
+};
+} catch(e) {}
+}
+document.getElementById("homeBtn").onclick = () => { renderHome(); toTop(); };
+try { renderHome(); }
+catch(e) { app.innerHTML = '<div class="wrap" style="padding-block:40px"><h2>Something went wrong loading the course</h2><p style="margin-top:10px;color:var(--muted)">Please refresh the page, or open the link in Chrome or Safari.</p></div>'; }
+</script>
+</body></html>
